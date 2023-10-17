@@ -1,0 +1,14 @@
+{
+  "name": "about-me",
+  "version": "1.0.0",
+  "description": "Landing page about me",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Dmytro Haborak",
+  "license": "ISC",
+  "devDependencies": {
+    "gulp": "^4.0.2"
+  }
+}
