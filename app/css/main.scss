@@ -100,7 +100,7 @@ header {
     .main {
         margin-top: 71px;
         display: grid;
-        grid-template-columns: 100px 500px 600px;
+        grid-template-columns: 150px 450px 600px;
         grid-gap: 20px;
         
         // Анімація при завантаженні сторінки
@@ -133,7 +133,6 @@ header {
             }
 
         .social {
-
               .linkedin,
               .github,
               .telegram {
@@ -174,7 +173,7 @@ header {
     }
 
         .second-block {
-            margin-top: 250px;
+            margin-top: 175px;
 
             .hello + .name + .position {
                 font-weight: 600;
