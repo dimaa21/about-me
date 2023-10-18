@@ -2,17 +2,20 @@
 
 $orangeColor: #FFA688;
 $whiteColor: #fff;
+$blackColor: #202124;
 
 body {
     font-family: 'Poppins', sans-serif;
-    background: #202124;
+    background: $blackColor;
 }
 
+// Шапка
 header {
+    // Верхнє меню
     .head {
-        margin-top: 60px;
+        margin-top: 61px;
         display: grid;
-        grid-template-columns: 500px 1fr 1fr 1fr 1fr;
+        grid-template-columns: 750px 1fr 1fr 1fr 1fr;
         grid-gap: 20px;
 
         @media(max-width: 1500px) {
@@ -25,23 +28,156 @@ header {
 
         a {
             color: $whiteColor;
+            display: inline-block;
+            position: relative;
             font-size: 25px;
             font-weight: 600;
             text-decoration: none;
 
-            &:hover {
-                color: #FFA688;
+
+            &::after {
+              content: '';
+              position: absolute;
+              transform: scaleX(0);
+              height: 2px;
+              bottom: 0;
+              left: 0;
+              background-color: $whiteColor;
+              transform-origin: bottom right;
+              transition: transform 0.25s ease-out;
+            }
+
+            &:hover::after {
+              transform: scaleX(1);
+              transform-origin: bottom left;
             }
         }
+
+            .first {
+                &::after {
+                    width: 60px;
+                }
+            }
+
+            .second, .third {
+                &::after {
+                    width: 75px;
+                }
+            }
+
+            .four, .five {
+                &::after {
+                    width: 105px;
+                }
+            }
+        }
+
+    /* Сховати всі елементи під час завантаження сторінки */
+    .white-line-high,
+    .social,
+    .white-line-low,
+    .first-block,
+    .second-block,
+    .third-block {
+      opacity: 0;
+      transform: translateY(20px);
+      transition: opacity 5s, transform 5s;
     }
 
+    /* Встановіть відображення елементів при досягненні анімації */
+    .social.show,
+    .white-line.show,
+    .second-block.show,
+    .third-block.show {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    
+
+    // Основна інформація з шапки
     .main {
+        margin-top: 71px;
+        display: grid;
+        grid-template-columns: 1fr 500px 600px;
+        grid-gap: 20px;
         
-        
-        .white-line {
-            width: 1px;
-            height: 332px;
-            background-color: $whiteColor;
+        .first-block {
+            .white-line-high {
+                margin-left: 30px;
+                width: 1px;
+                height: 332px;
+                background-color: $whiteColor;
+            }
+
+            .social {
+                    img {
+                        border-radius: 50%;
+                        margin: 5px 15px;
+                        padding: 3px 0;
+                        width: 30px;
+                }
+            }
+
+            .white-line-low {
+                margin-left: 30px;
+                width: 1px;
+                height: 332px;
+                background-color: $whiteColor;
+            }
+    }
+
+        .second-block {
+            margin-top: 250px;
+
+            .hello + .name + .position {
+                font-weight: 600;
+            }
+
+            .hello {
+                color: $whiteColor;
+                font-size: 32px;
+                margin-left: 5px;
+            }
+
+            .name {
+                color: $orangeColor;
+                font-size: 88px;
+            }
+
+            .position {
+                color: #BCBCBD;
+                font-size: 24px;
+                margin-left: 5px;
+            }
+
+            .button {
+                display: flex;
+
+                .hire, .more {
+                    font-weight: 600;
+                    border-radius: 7px;
+                    font-size: 24px;
+                }
+
+                .hire {
+                    color: #000;
+                    background: $orangeColor;
+                    padding: 10px 60px;
+                }
+
+                .more {
+                    color: $orangeColor;
+                    font-size: 24px;
+                    background: $blackColor;
+                    padding: 10px 26px;
+                }
+
+            button {
+                display: block;
+                text-transform: uppercase;
+                margin: 30px 5px;
+                }
+            }
         }
     }
 }
