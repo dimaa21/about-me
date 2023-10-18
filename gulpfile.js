@@ -7,7 +7,7 @@ const gulp = require('gulp'),
 
 /* Мініфікація CSS файлів */
 gulp.task('minCSS', async function(){
-  gulp.src('app/css/*.scss') // виберіть файли, які потрібно перемістити
+  gulp.src('./app/css/*.scss') // виберіть файли, які потрібно перемістити
       .pipe(sass())
       .pipe(minifyCSS())
       .pipe(rename({
@@ -19,7 +19,7 @@ gulp.task('minCSS', async function(){
 
 /* Мініфікація JS файлів */
 gulp.task('minJS', async function(){
-  gulp.src('app/js/main.js') // виберіть файли, які потрібно перемістити
+  gulp.src('./app/js/main.js') // виберіть файли, які потрібно перемістити
       .pipe(minifyJS())
       .pipe(gulp.dest('public/js')) // вказати цільову директорію переміщення
       .pipe(browserSync.stream());
@@ -27,9 +27,9 @@ gulp.task('minJS', async function(){
 
 /*  Відслідкування змін в файлах */
 gulp.task('watchAll', function () {
-    gulp.watch("app/css/*.scss", gulp.series('minCSS'));
+    gulp.watch("./app/css/*.scss", gulp.series('minCSS'));
     // series - допомагає виконувати задачі почерзі
-    gulp.watch("app/js/*.js", gulp.series('minJS'));
+    gulp.watch("./app/js/*.js", gulp.series('minJS'));
 });
 
 /* Для автоматичної синхронізації оновлення сторінки */
