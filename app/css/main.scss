@@ -24,6 +24,7 @@ header {
             grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
         }
 
+        // Меню
         a {
             color: $whiteColor;
             display: inline-block;
@@ -32,7 +33,7 @@ header {
             font-weight: 600;
             text-decoration: none;
 
-
+        // Ефекти при наведенні на меню    
             &::after {
               content: '';
               position: absolute;
@@ -51,6 +52,8 @@ header {
             }
         }   
 
+
+            // Ефекти при наведенні на кожен елемент        
             .first {
                 margin: -5px 10px;
                 padding: 0;
@@ -97,7 +100,7 @@ header {
         }
 
     // Основна інформація з шапки
-    .main {
+    .header-main {
         margin-top: 71px;
         display: grid;
         grid-template-columns: 150px 450px 600px;
@@ -124,6 +127,8 @@ header {
           }
         }
 
+        // Основна частина шапки розбита на 3 блоки
+        // Перший блок з соц.мережами
         .first-block {
             .white-line-high {
                 margin-left: 30px;
@@ -132,6 +137,7 @@ header {
                 background-color: $whiteColor;
             }
 
+        // Соц. мережі  
         .social {
               .linkedin,
               .github,
@@ -170,8 +176,9 @@ header {
                 height: 240px;
                 background-color: $whiteColor;
             }
-    }
+        }
 
+        // Другий блок з описом про мене
         .second-block {
             margin-top: 175px;
 
@@ -243,5 +250,10 @@ header {
                 }
             }
         }
+
+        // Третій блок з фото
+        .third-block {
+                margin-top: -50px;
+            }
+        }   
     }
-}
