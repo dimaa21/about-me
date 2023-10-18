@@ -1,8 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
 
-$orangeColor: #FFA688;
-$whiteColor: #fff;
-$blackColor: #202124;
+@import "vars";
 
 body {
     font-family: 'Poppins', sans-serif;
@@ -15,7 +13,7 @@ header {
     .head {
         margin-top: 61px;
         display: grid;
-        grid-template-columns: 750px 1fr 1fr 1fr 1fr;
+        grid-template-columns: 600px 1fr 1fr 1fr 1fr;
         grid-gap: 20px;
 
         @media(max-width: 1500px) {
@@ -51,13 +49,39 @@ header {
               transform: scaleX(1);
               transform-origin: bottom left;
             }
-        }
+        }   
 
             .first {
-                &::after {
-                    width: 60px;
+                margin: -5px 10px;
+                padding: 0;
+
+                  img {
+                    border-radius: 50%;
+                    max-width: 100%;
+                    transition: transform 0.3s ease-in-out;
+                  }
+
+                  &::before {
+                    content: '';
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 0;
+                    background-color: #ff6600;
+                    z-index: -1;
+                    transition: width 0.3s ease-in-out;
+                  }
+
+                  &:hover {
+                    img {
+                      transform: scale(1.1); // Збільшення зображення при наведенні
+                    }
+
+                    &::before {
+                      width: 100%; // Розширення фонового елемента при наведенні
+                    }
+                  }
                 }
-            }
 
             .second, .third {
                 &::after {
@@ -72,56 +96,79 @@ header {
             }
         }
 
-    /* Сховати всі елементи під час завантаження сторінки */
-    .white-line-high,
-    .social,
-    .white-line-low,
-    .first-block,
-    .second-block,
-    .third-block {
-      opacity: 0;
-      transform: translateY(20px);
-      transition: opacity 5s, transform 5s;
-    }
-
-    /* Встановіть відображення елементів при досягненні анімації */
-    .social.show,
-    .white-line.show,
-    .second-block.show,
-    .third-block.show {
-      opacity: 1;
-      transform: translateY(0);
-    }
-    
-
     // Основна інформація з шапки
     .main {
         margin-top: 71px;
         display: grid;
-        grid-template-columns: 1fr 500px 600px;
+        grid-template-columns: 100px 500px 600px;
         grid-gap: 20px;
         
+        // Анімація при завантаженні сторінки
+        .first-block,
+        .second-block,
+        .third-block,
+        .social {
+          animation: fade-in 6s ease-in-out forwards;
+          opacity: 0;
+          transform: translateY(20px);
+        }
+
+        @keyframes fade-in {
+          from {
+            opacity: 0;
+            transform: translateY(20px);
+          }
+          to {
+            opacity: 1;
+            transform: translateY(0);
+          }
+        }
+
         .first-block {
             .white-line-high {
                 margin-left: 30px;
                 width: 1px;
-                height: 332px;
+                height: 240px;
                 background-color: $whiteColor;
             }
 
-            .social {
-                    img {
-                        border-radius: 50%;
-                        margin: 5px 15px;
-                        padding: 3px 0;
-                        width: 30px;
+        .social {
+
+              .linkedin,
+              .github,
+              .telegram {
+                position: relative;
+                overflow: hidden;
+                width: 50px;
+                height: 50px;
+
+                a {
+                  display: flex;
+                  align-items: center;
+                  justify-content: center;
+                  width: 100%;
+                  height: 100%;
+                  color: #fff;
+                  border: 2px solid transparent;
+                  transition: transform 0.3s ease;
+
+                img {
+                    margin-left: 15px;
+                    border-radius: 50%;
+                    width: 30px;
                 }
+
+                  &:hover {
+                    transform: scale(1.1) translateY(-5px);
+                  }
+                }
+              }
             }
 
             .white-line-low {
                 margin-left: 30px;
                 width: 1px;
-                height: 332px;
+                height: 240px;
                 background-color: $whiteColor;
             }
     }
@@ -156,20 +203,38 @@ header {
                 .hire, .more {
                     font-weight: 600;
                     border-radius: 7px;
-                    font-size: 24px;
+                    font-size: 20px;
                 }
 
                 .hire {
                     color: #000;
-                    background: $orangeColor;
                     padding: 10px 60px;
+                    background-color: $orangeColor; // Задайте початковий фон
+                    border: 2px solid #000; // Задайте початковий колір межі
+                    padding: 10px 20px; // Задайте розмір кнопки
+                    transition: background-color 0.3s, color 0.3s, transform 0.3s; // Додайте перехід для фону та кольору тексту
+
+                    &:hover {
+                        background-color: $blackColor; // Змініть фон на чорний при наведенні
+                        color: #fff; // Змініть колір тексту на білий при наведенні
+                        transform: translateY(-5px); // Підняти кнопку вгору при наведенні
+                      }
                 }
 
                 .more {
                     color: $orangeColor;
-                    font-size: 24px;
+                    font-size: 20px;
                     background: $blackColor;
                     padding: 10px 26px;
+                    border: 2px solid #000; // Задайте початковий колір межі
+                    padding: 10px 20px; // Задайте розмір кнопки
+                    transition: background-color 0.3s, color 0.3s, transform 0.3s; // Додайте перехід для фону та кольору тексту
+
+                    &:hover {
+                        background-color: $orangeColor;; // Змініть фон на чорний при наведенні
+                        color: $blackColor; // Змініть колір тексту на білий при наведенні
+                        transform: translateY(-5px); // Підняти кнопку вгору при наведенні
+                      }
                 }
 
             button {
