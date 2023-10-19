@@ -343,17 +343,101 @@ header {
 // Послуги, які я можу надавати
 
 section {
-    margin-top: 196px;
+    margin-top: 5%; /* Вміст адаптується відступом від верху екрану */
+    text-align: center; // Вирівнювання по центру
 
     .services {
-        p {
+        .main-text {
             color: $orangeColor;
-            font-size: 56px;
+            font-size: 36px; /* Зменшуємо розмір тексту для менших екранів */
             font-weight: 600;
-            text-align: center;
+            position: relative;
+            display: inline-block; // Зробити блоком, але залишити ширину тексту
+            margin: 0 auto; // Горизонтальне вирівнювання по центру
+
+            &::after {
+                content: "";
+                position: absolute;
+                left: 35px; /* Зменшуємо відстань від тексту до лінії */
+                bottom: -5px; // Визначає відстань від тексту до лінії
+                width: 75%; // Ширина лінії рівна ширині тексту
+                height: 2px; // Визначає товщину лінії
+                background-color: $orangeColor; // Колір лінії, змініть його на ваш смак
+            }
+        }
+
+        .services-info {
+            margin-top: 3%; /* Вміст адаптується відступом від верху блоку */
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Змінюємо кількість колонок та їх розмір залежно від розміру екрану */
+            gap: 103px; /* Зберігаємо відступ між елементами */
+
+            .vue,
+            .landing,     
+            .laravel {
+                padding: 20px; /* Зменшуємо відступи */
+                text-align: center;
+                border-radius: 9px;
+                border: 2px solid $orangeColor; /* Зменшуємо товщину рамки */
+                transition: transform 0.2s;
+
+                &:hover {
+                    transform: scale(1.1);
+                }
+
+                img {
+                    margin-top: 50px;
+                }
+            }
+
+            .vue {
+                height: auto; /* Знімаємо жорстку висоту */
+                .name-services {
+                    margin-top: 20px; /* Зменшуємо відступ */
+                }    
+            }
+
+            .landing, 
+            .laravel {
+                height: auto; /* Знімаємо жорстку висоту */
+            }
+
+            .laravel {
+                img {
+                    border-radius: 50%;
+                }
+            }
+
+            p {
+                color: $orangeColor;
+                font-size: 32px;
+                font-weight: 600;
+                margin: 10px 0; /* Зменшуємо відступи */
+                font-size: 24px; /* Зменшуємо розмір тексту */
+            }
+
+            span {
+                color: $whiteColor;
+                text-align: center;
+                font-size: 22px;
+                font-weight: 400;
+                font-size: 18px; /* Зменшуємо розмір тексту */
+            }
         }
     }
 }
 
 
+// Розділ про мої проекти
+
+.projects {
+    margin-top: 180px;
+
+    .name-section {
+        text-transform: uppercase;
+        color: $orangeColor;
+        font-size: 56px;
+        font-weight: 600;
+    }
+}
 
