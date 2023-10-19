@@ -55,7 +55,7 @@ header {
 
             // Ефекти при наведенні на кожен елемент        
             .first {
-                margin: -5px 10px;
+                margin: -3px 10px;
                 padding: 0;
 
                   img {
@@ -287,6 +287,8 @@ header {
 
       // Інформація про мене
       .info {
+        margin-top: 50px;
+
           h1 {
             color: $orangeColor;
             font-size: 56px;
@@ -296,13 +298,14 @@ header {
 
           p {
             color: $whiteColor;
-            font-size: 31px;
+            font-size: 27px;
             font-weight: 400;
           }
 
+          // Стек технологій
           .stack {
             .stack-photo {
-                .front-end, .back-end {
+                .front-end, .back-end, .ide {
                     display: flex;
 
                     .html,
@@ -317,7 +320,9 @@ header {
                     .laravel,
                     .sql,
                     .composer,
-                    .docker {
+                    .docker,
+                    .webstorm,
+                    .phpstorm {
                             img {
                                 margin-left: 15px;
                                 transition: transform 0.3s ease, opacity 0.3s ease;
@@ -333,6 +338,9 @@ header {
             } 
         }
     }
+
+
+// Послуги, які я можу надавати
 
 
 
