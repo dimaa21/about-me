@@ -302,7 +302,7 @@ header {
 
           .stack {
             .stack-photo {
-                .front-end {
+                .front-end, .back-end {
                     display: flex;
 
                     .html,
@@ -310,22 +310,29 @@ header {
                     .sass,
                     .js,
                     .jquery,
-                    .vue {
-                        img {
-                            margin-left: 15px;
-                            transition: transform 0.3s ease, opacity 0.3s ease;
+                    .vue,
+                    .gulp,
+                    .figma,
+                    .php,
+                    .laravel,
+                    .sql,
+                    .composer,
+                    .docker {
+                            img {
+                                margin-left: 15px;
+                                transition: transform 0.3s ease, opacity 0.3s ease;
 
-                            &:hover {
-                                  transform: scale(1.1);
-                                    opacity: 0.8;
+                                &:hover {
+                                      transform: scale(1.1);
+                                        opacity: 0.8;
+                                }
                             }
                         }
                     }
                 }
-            }
-          }
-      }
-  }
+            } 
+        }
+    }
 
 
 
