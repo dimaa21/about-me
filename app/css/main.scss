@@ -111,7 +111,7 @@ header {
         .header-main {
           margin-top: 98px;  
           display: grid;
-          grid-template-columns: repeat(3, 1fr);
+          grid-template-columns: 1fr 400px 700px;
           grid-gap: 20px;
 
           @media (max-width: 1200px) {
@@ -360,7 +360,7 @@ header {
 // Послуги, які я можу надавати
 
 section {
-    margin-top: 5%; /* Вміст адаптується відступом від верху екрану */
+    margin-top: 200px; /* Вміст адаптується відступом від верху екрану */
     text-align: center; // Вирівнювання по центру
 
     .services {
@@ -384,7 +384,7 @@ section {
         }
 
         .services-info {
-            margin-top: 3%; /* Вміст адаптується відступом від верху блоку */
+            margin-top: 75px; /* Вміст адаптується відступом від верху блоку */
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Змінюємо кількість колонок та їх розмір залежно від розміру екрану */
             gap: 103px; /* Зберігаємо відступ між елементами */
