@@ -235,7 +235,7 @@ header {
                     transition: background-color 0.3s, color 0.3s, transform 0.3s; // Додайте перехід для фону та кольору тексту
 
                     &:hover {
-                        background-color: $orangeColor;; // Змініть фон на чорний при наведенні
+                        background-color: $orangeColor; // Змініть фон на чорний при наведенні
                         color: $blackColor; // Змініть колір тексту на білий при наведенні
                         transform: translateY(-5px); // Підняти кнопку вгору при наведенні
                       }
@@ -341,6 +341,19 @@ header {
 
 
 // Послуги, які я можу надавати
+
+section {
+    margin-top: 196px;
+
+    .services {
+        p {
+            color: $orangeColor;
+            font-size: 56px;
+            font-weight: 600;
+            text-align: center;
+        }
+    }
+}
 
 
 
