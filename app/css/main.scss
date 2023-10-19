@@ -257,7 +257,7 @@ header {
     }
 
     // Основна частина
-    .about-me {
+    .main {
       margin-top: 200px;
       animation: fade-in 6s ease-in-out forwards;
       opacity: 0;
@@ -285,6 +285,7 @@ header {
         }
       }
 
+      // Інформація про мене
       .info {
           h1 {
             color: $orangeColor;
@@ -299,35 +300,32 @@ header {
             font-weight: 400;
           }
 
-        .social {
-              .html,
-              .css,
-              .scss,
-              .js,
-              .react,
-              .gulp,
-              .git,
-              .figma {
-                overflow: hidden;
-                width: 50px;
-                height: 50px;
-                display: flex;
-                flex-direction: row;
+          .stack {
+            .stack-photo {
+                .front-end {
+                    display: flex;
 
-                .social-photo {
-                  width: 100%;
-                  height: 100%;
-                  color: #fff;
-                  border: 2px solid transparent;
-                  transition: transform 0.3s ease;
+                    .html,
+                    .css,
+                    .sass,
+                    .js,
+                    .jquery,
+                    .vue {
+                        img {
+                            margin-left: 15px;
+                            transition: transform 0.3s ease, opacity 0.3s ease;
 
-                  &:hover {
-                    transform: scale(1.1) translateY(-5px);
-                  }
+                            &:hover {
+                                  transform: scale(1.1);
+                                    opacity: 0.8;
+                            }
+                        }
+                    }
                 }
-              }
             }
           }
-        }
+      }
+  }
+
 
 
