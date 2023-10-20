@@ -5,119 +5,145 @@
 body {
     font-family: 'Poppins', sans-serif;
     background: $blackColor;
+    color: $whiteColor;
+}
+
+
+* {
+  outline: none;
+}
+
+a {
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: none;
+  }
+}
+
+.flex {
+    display: flex;
+    justify-content: space-between; // розкидати об'єкти по різних сторонах
 }
 
 // Шапка
 header {
-    // Верхнє меню
-    .head {
-        margin-top: 61px;
-        display: grid;
-        grid-template-columns: 500px 1fr 1fr 1fr 1fr;
-        grid-gap: 20px;
+  padding-top: 60px;
 
-        @media (max-width: 1500px) {
-            grid-template-columns: 400px 1fr 1fr 1fr 1fr;
-        }
+  .header-top {
+    @extend .flex;
+    align-items: center;
 
-        @media (max-width: 1200px) {
-            grid-template-columns: 300px 1fr 1fr 1fr 1fr;
-        }
-
-        @media (max-width: 800px) {
-            grid-template-columns: repeat(5, 1fr);
-        }
-
-        @media (max-width: 600px) {
-            text-align: center;
-            grid-template-columns: 1fr;
-        }
-
-        // Меню
-        a {
-            color: $whiteColor;
-            display: inline-block;
-            position: relative;
-            font-size: 25px;
-            font-weight: 600;
-            text-decoration: none;
-
-            // Ефекти при наведенні на меню
-            &::after {
-                content: '';
-                position: absolute;
-                transform: scaleX(0);
-                height: 2px;
-                bottom: 0;
-                left: 0;
-                background-color: $whiteColor;
-                transform-origin: bottom right;
-                transition: transform 0.25s ease-out;
-            }
-
-            &:hover::after {
-                transform: scaleX(1);
-                transform-origin: bottom left;
-            }
-        }
-
-        // Ефекти при наведенні на кожен елемент
-        .first {
-            margin: -3px 10px;
-            padding: 0;
-
-            img {
-                border-radius: 50%;
-                max-width: 100%;
-                transition: transform 0.3s ease-in-out;
-            }
-
-            &::before {
-                content: '';
-                position: absolute;
-                top: 0;
-                left: 0;
-                width: 0;
-                background-color: #ff6600;
-                z-index: -1;
-                transition: width 0.3s ease-in-out;
-            }
-
-            &:hover {
-                img {
-                    transform: scale(1.1); // Збільшення зображення при наведенні
-                }
-
-                &::before {
-                    width: 100%; // Розширення фонового елемента при наведенні
-                }
-            }
-        }
-
-        .second, .third {
-            &::after {
-                width: 75px;
-            }
-        }
-
-        .four, .five {
-            &::after {
-                width: 105px;
-            }
-        }
+    .logo {
+      margin: 7px 20px;
     }
+
+    @media(min-width: 1025px) {
+      .menu {
+        display: none;
+      }
+    }
+
+    @media(max-width: 1024px) {
+      ul {
+        display: none;
+      }
+
+      .menu {
+        font-size: 35px;
+      }
+    }
+
+    ul {
+      list-style: none;
+      margin: initial;
+
+      li {
+        display: inline-block;
+        margin-right: 57px;
+
+        &:last-child {
+          margin-right: 0;
+        }
+
+        a {
+          color: $whiteColor;
+          text-transform: uppercase;
+          font-size: 18px;
+
+          &::after {
+            content: "";
+            width: 0%;
+            display: block;
+            background-color: $whiteColor;
+            height: 2px;
+            transition: all .3s ease;
+          }
+
+          &:hover::after {
+            width: 100%;
+          }
+        }
+      }
+    }
+  }
+
+  @media(min-width: 1025px){
+    .mobile-menu {
+      display: none!important;
+    }
+  }
+
+  @media(max-width: 1024px){
+    .mobile-menu {
+      display: none;
+      text-align: center;
+
+      ul {
+        padding: 0;
+      }
+
+      li {
+        margin-bottom: 25px;
+        list-style: none;
+        font-size: 24px;
+
+        a {
+          color: $whiteColor;
+        }
+      }
+    }
+  }
 
     // Основна інформація з шапки
         .header-main {
-          margin-top: 98px;  
+          margin-top: 97px;  
           display: grid;
-          grid-template-columns: 1fr 400px 700px;
+          grid-template-columns: 1fr 450px 600px;
           grid-gap: 20px;
 
-          @media (max-width: 1200px) {
-            display: flex;
-            flex-wrap: wrap;
+          @media (max-width: 1300px) {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-gap: 20px;
           }
+
+          @media (max-width: 1100px) {
+            display: grid;
+            grid-template-columns: 1fr;
+            margin: 0;
+            padding: 0;
+
+            .social,
+            .white-line-high,
+            .white-line-low {
+                display: none;
+            }
+          }
+
+            .second-block {
+                
+            }
 
           @media (max-width: 800px) {
             grid-template-columns: 1fr;
@@ -274,7 +300,7 @@ header {
 
 
     // Основна частина
-    .main {
+    .about-me {
       margin-top: 200px;
       animation: fade-in 6s ease-in-out forwards;
       opacity: 0;
@@ -392,10 +418,10 @@ section {
             .vue,
             .landing,     
             .laravel {
-                padding: 20px; /* Зменшуємо відступи */
+                padding: 20px;
                 text-align: center;
                 border-radius: 9px;
-                border: 2px solid $orangeColor; /* Зменшуємо товщину рамки */
+                border: 2px solid $orangeColor;
                 transition: transform 0.2s;
 
                 &:hover {
@@ -408,15 +434,15 @@ section {
             }
 
             .vue {
-                height: auto; /* Знімаємо жорстку висоту */
+                height: auto; 
                 .name-services {
-                    margin-top: 20px; /* Зменшуємо відступ */
+                    margin-top: 20px;
                 }    
             }
 
             .landing, 
             .laravel {
-                height: auto; /* Знімаємо жорстку висоту */
+                height: auto;
             }
 
             .laravel {
@@ -429,8 +455,8 @@ section {
                 color: $orangeColor;
                 font-size: 32px;
                 font-weight: 600;
-                margin: 10px 0; /* Зменшуємо відступи */
-                font-size: 24px; /* Зменшуємо розмір тексту */
+                margin: 10px 0;
+                font-size: 24px;
             }
 
             span {
@@ -438,7 +464,7 @@ section {
                 text-align: center;
                 font-size: 22px;
                 font-weight: 400;
-                font-size: 18px; /* Зменшуємо розмір тексту */
+                font-size: 18px;
             }
         }
     }
