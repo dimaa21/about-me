@@ -279,131 +279,54 @@ header {
 }
 
     // Основна частина
-    .about-me {
-      margin-top: 200px;
-      animation: fade-in 3s ease-in-out forwards;
-      opacity: 0;
-      transform: translateY(20px);
-      @extend .flex;
-      display: flex;
+.about-me {
+  margin-top: 20px;
+  padding-bottom: 90px;
 
-      @media(max-width: 1400px) {
-
-          .info {
-              margin: 0;
-
-              .desc {
-                font-size: 25px;
-              }
-
-              .front-end {
-                white-space: nowrap;
-              }
-          }
-      }
-
-@media (max-width: 1200px) {
-    margin: 50px 100px 100px 100px;
-    display: flex;
-    justify-content: center;
+  .block {
+    @extend .flex;
     align-items: center;
-    flex-wrap: wrap-reverse;
+    color: #a0a0a0;
 
     .info {
-      h1 {
-        text-align: center;
-      }
 
-      .desc {
-        text-align: center;
-        word-wrap: break-word;
+
+      h1 {
+        color: $orangeColor;
+        font-size: 56px;
+        font-weight: 600;
+        text-transform: uppercase;
       }
     }
 
-    .my-photo {
-      margin-top: 75px;
-      display: flex;
-      justify-content: center;
-      align-items: center;
+    @media(max-width: 780px) {
+      .order-mobile {
+        order: 2;
+        margin-top: 30px;
+      }
+
+      flex-wrap: wrap;
+    }
+
+    > div {
+      width: 100%;
+      text-align: center;
+    }
+
+    .info {
+      @media(min-width: 781px) {
+        max-width: 500px;
+      }
+
+    h2 {
+      font-size: 40px;
+      font-weight: 700;
+      color: #000;
+
+      }
     }
   }
-
-
-
-      @keyframes fade-in {
-        from {
-          opacity: 0;
-          transform: translateY(20px);
-        }
-        to {
-          opacity: 1;
-          transform: translateY(0);
-        }
-      }
-
-      .my-photo {
-       margin-right: 120px;
-
-      img {
-        margin-left: 20px;
-        border-radius: 15%;
-        }
-      }
-
-      // Інформація про мене
-      .info {
-          margin-top: 35px;
-
-          h1 {
-            color: $orangeColor;
-            font-size: 56px;
-            font-weight: 600;
-            text-transform: uppercase;
-          }
-
-          p {
-            color: $whiteColor;
-            font-size: 27px;
-            font-weight: 400;
-          }
-
-          // Стек технологій
-          .stack {
-            .stack-photo {
-                .front-end, .back-end, .ide {
-                    display: flex;
-
-                    .html,
-                    .css,
-                    .sass,
-                    .js,
-                    .jquery,
-                    .vue,
-                    .gulp,
-                    .figma,
-                    .php,
-                    .laravel,
-                    .sql,
-                    .composer,
-                    .docker,
-                    .webstorm,
-                    .phpstorm {
-                            img {
-                                margin-left: 15px;
-                                transition: transform 0.3s ease, opacity 0.3s ease;
-
-                                &:hover {
-                                      transform: scale(1.1);
-                                        opacity: 0.8;
-                                }
-                            }
-                        }
-                    }
-                }
-            }
-        }
-    }
-
+}
 
 // Послуги, які я можу надавати
 
