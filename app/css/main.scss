@@ -8,7 +8,6 @@ body {
     color: $whiteColor;
 }
 
-
 * {
   outline: none;
 }
@@ -116,59 +115,40 @@ header {
   }
 
     // Основна інформація з шапки
-        .header-main {
-          margin-top: 97px;  
-          display: grid;
-          grid-template-columns: 1fr 450px 600px;
-          grid-gap: 20px;
+  .header-main {
+    @extend .flex;
+    margin-top: 100px;
 
-          @media (max-width: 1300px) {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            grid-gap: 20px;
-          }
+    @media(max-width: 1200px) {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+      padding-bottom: 100px;
 
-          @media (max-width: 1100px) {
-            display: grid;
-            grid-template-columns: 1fr;
-            margin: 0;
-            padding: 0;
+      .first-block {
+        display: none;
+      }
 
-            .social,
-            .white-line-high,
-            .white-line-low {
-                display: none;
-            }
-          }
+      .second-block {
+        margin-top: 0 !important;
 
-            .second-block {
-                
-            }
-
-          @media (max-width: 800px) {
-            grid-template-columns: 1fr;
-          }
-
-        // Анімація при завантаженні сторінки
-        .first-block,
-        .second-block,
-        .third-block,
-        .social {
-            animation: fade-in 6s ease-in-out forwards;
-            opacity: 0;
-            transform: translateY(20px);
+        .hello,
+        .name,
+        .position,
+        .button {
+          align-items: center!important;
         }
+      }
 
-        @keyframes fade-in {
-            from {
-                opacity: 0;
-                transform: translateY(20px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
+      .third-block {
+        img {
+          margin-top: 80px;
+          text-align: center;
+          width: 100%;
         }
+      }
+    }
 
         // Основна частина шапки розбита на 3 блоки
         // Перший блок з соц.мережами
@@ -298,15 +278,57 @@ header {
     }
 }
 
-
     // Основна частина
     .about-me {
       margin-top: 200px;
-      animation: fade-in 6s ease-in-out forwards;
+      animation: fade-in 3s ease-in-out forwards;
       opacity: 0;
       transform: translateY(20px);
-
+      @extend .flex;
       display: flex;
+
+      @media(max-width: 1400px) {
+
+          .info {
+              margin: 0;
+
+              .desc {
+                font-size: 25px;
+              }
+
+              .front-end {
+                white-space: nowrap;
+              }
+          }
+      }
+
+@media (max-width: 1200px) {
+    margin: 50px 100px 100px 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap-reverse;
+
+    .info {
+      h1 {
+        text-align: center;
+      }
+
+      .desc {
+        text-align: center;
+        word-wrap: break-word;
+      }
+    }
+
+    .my-photo {
+      margin-top: 75px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+
+
 
       @keyframes fade-in {
         from {
@@ -330,7 +352,7 @@ header {
 
       // Інформація про мене
       .info {
-        margin-top: 50px;
+          margin-top: 35px;
 
           h1 {
             color: $orangeColor;
@@ -378,7 +400,7 @@ header {
                         }
                     }
                 }
-            } 
+            }
         }
     }
 
@@ -456,7 +478,6 @@ section {
                 font-size: 32px;
                 font-weight: 600;
                 margin: 10px 0;
-                font-size: 24px;
             }
 
             span {
@@ -464,12 +485,10 @@ section {
                 text-align: center;
                 font-size: 22px;
                 font-weight: 400;
-                font-size: 18px;
             }
         }
     }
 }
-
 
 // Розділ про мої проекти
 
