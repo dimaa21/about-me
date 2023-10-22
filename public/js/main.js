@@ -22,37 +22,32 @@ $(".header-top .menu").on("click", function() {
     $("header .mobile-menu").slideToggle();
 })
 
-  const reviews = document.querySelectorAll('.review');
-  let currentReview = 0;
+const slider = document.querySelector('.slider');
+const slides = document.querySelectorAll('.slide');
+let index = 0;
 
-  function showReview(index) {
-    if (index < 0) {
-      currentReview = reviews.length - 1;
-    } else if (index >= reviews.length) {
-      currentReview = 0;
+function updateSlider() {
+    slider.style.transform = `translateX(-${index * 100}%)`;
+}
+
+function nextSlide() {
+    if (index < slides.length - 1) {
+        index++;
+        updateSlider();
     }
+}
 
-    reviews.forEach((review, i) => {
-      if (i === currentReview) {
-        review.style.display = 'block';
-      } else {
-        review.style.display = 'none';
-      }
-    });
-  }
+function prevSlide() {
+    if (index > 0) {
+        index--;
+        updateSlider();
+    }
+}
 
-  function nextReview() {
-    showReview(currentReview + 2);
-  }
+document.querySelector('.prev-button').addEventListener('click', prevSlide);
+document.querySelector('.next-button').addEventListener('click', nextSlide);
 
-  function prevReview() {
-    showReview(currentReview - 1);
-  }
+// Automatic slide change
+setInterval(nextSlide, 5000);
 
-  // Відображення першого відгуку
-  showReview(currentReview);
-
-  // Додавання обробників подій для кнопок навігації (опціонально)
-  document.querySelector('.prev').addEventListener('click', prevReview);
-  document.querySelector('.next').addEventListener('click', nextReview);
 
