@@ -470,46 +470,88 @@ main {
         }
       }
 
-.slider-container {
-  width: 80%;
-  margin: 0 auto;
-  overflow: hidden;
-  position: relative;
 
-  .main-text {
-    text-align: center;
-    color: $orangeColor;
-    font-size: 56px;
-    font-weight: 600;
-  }
+.slider {
+  place-items: center;
 
-  .slider {
-    display: flex;
-    transition: transform 0.5s ease-in-out;
-  }
+    .section-header {
+        position: relative;
+        text-align: center;
+        font-weight: 900;
+        padding-bottom: 10px;
+        color: $blackColor!important;
+    }
 
-  .slide {
-    flex: 0 0 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-  }
+    .section-header span {
+        display: block;
+        font-size: 15px;
+        font-weight: 300;
+    }
 
-  img {
-    max-width: 100%;
-    height: auto;
-  }
+    .testimonials {
+        max-width: 1000px;
+        padding: 0 15px 50px;
+        margin: 0 auto 80px auto;
+    }
 
-  .testimonial {
-    margin-top: 20px;
-    font-style: italic;
-  }
+    .single-item {
+        border-radius: 40px!important;
+        color: #111!important;
+        padding: 10px;
+        margin: 30px 15px;
+    }
+
+    .profile {
+        margin-bottom: 30px;
+        text-align: center;    
+    }
+
+    .img-area {
+        margin: 0 15px 15px 15px;
+    }
+
+    .img-area img {
+        height: 200px;
+        width: 200px;
+        border-radius: 50%;
+        border: 7px solid $orangeColor;
+    }
+    .content {
+        font-size: 18px;
+    }
+
+    .content p {
+        color: $orangeColor!important;
+        text-align: justify;
+        margin-top: 30px; 
+
+        @media(max-width: 768px) {
+            margin-top: -10px 0 10px 0;
+        }
+    }
+
+    .socials i {
+        margin-right: 25px;
+        color: $blackColor!important;
+    }
+
+    .carousel-control-next-icon, .carousel-control-prev-icon {
+        background-color: $orangeColor;
+    }
+    
+    h1 {
+        color: $whiteColor;
+        text-align: center;
+        font-size: 48px;
+        font-weight: 500;
+        letter-spacing: -1px;
+        margin-bottom: 50px;
+    }
+
+    .img-area {
+        img {
+            align-items: center;
+            border-radius: 351px;
+        }
+    }
 }
-
-  .prev-button,
-  .next-button {
-    display: flex;
-    align-items: center;
-  }
-
