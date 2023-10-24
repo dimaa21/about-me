@@ -13,6 +13,16 @@ function slowScroll(id) {
     return false;
 }
 
+// Обробник подій, буде спрацьовувати при натисненні на нього
+$(".header-top .menu").on("click", function() {
+    if($("header .mobile-menu").is(":visible"))
+        $(this).html('<i class="fas fa-bars"></i>');
+    else
+        $(this).html('<i class="fas fa-times"></i>');
+
+    $("header .mobile-menu").slideToggle();
+})
+
 
 
 
