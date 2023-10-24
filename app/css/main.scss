@@ -483,29 +483,42 @@ main {
   }
 
   .reviews-block {
-    margin: 158px 0;
+    padding: 0 150px;
+    margin-top: 158px;
     display: flex;
     flex-direction: row;
     justify-content: space-around;
     align-items: center;
+
+    @media(max-width: 999px) {
+      dispaly: flex;
+      flex-direction: column;
+    }
+
   }
 
   .photo-client {
     margin-bottom: 20px;
-  } 
-
-  .name-person {
-      color: $orangeColor;
-      font-size: 32px;
-      font-weight: 600;
   }
 
   .name-person {
+      display: flex;
       text-align: center;
+      flex-direction: column;
+      white-space: pre-wrap;
 
-  span {
-      margin-bottom: 10px;
+    .full-review {
+      margin: 0;
+      font-size: 23px;
+      font-weight: 400;
     }
+
+    .name-client {
+        margin: 0; 
+        font-size: 32px;
+        font-weight: 600;
+        color: $orangeColor;
+    }  
   }
 }
 
