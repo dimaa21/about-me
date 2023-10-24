@@ -25,6 +25,25 @@ a {
     justify-content: space-between; // розкидати об'єкти по різних сторонах
 }
 
+.main-title {
+    color: $orangeColor;
+    font-size: 36px;
+    font-weight: 600;
+    position: relative;
+    display: inline-block;
+    margin: 0 auto;
+
+    &::after {
+        content: "";
+        position: absolute;
+        left: 35px;
+        bottom: -5px; 
+        width: 75%; 
+        height: 2px;
+        background-color: $orangeColor; 
+        }
+      }
+
 // Шапка
 header {
   padding-top: 60px;
@@ -280,7 +299,7 @@ header {
 
     // Основна частина
 .about-me {
-  margin-top: 200px;
+  margin-top: 100px;
   @extend .flex;
 
   .block {
@@ -342,22 +361,7 @@ section {
 
     .services {
         .main-text {
-            color: $orangeColor;
-            font-size: 36px;
-            font-weight: 600;
-            position: relative;
-            display: inline-block;
-            margin: 0 auto;
-
-            &::after {
-                content: "";
-                position: absolute;
-                left: 35px;
-                bottom: -5px; 
-                width: 75%; 
-                height: 2px;
-                background-color: $orangeColor; 
-            }
+            @extend .main-title;
         }
 
         .services-info {
@@ -428,9 +432,11 @@ main {
   .project {
       .name {
         p {
-          color: $orangeColor;
+          @extend .main-title;
           font-size: 56px;
-          font-weight: 600;
+          &::after {
+            dispay: none;
+          }
         }
       }
 
@@ -468,4 +474,38 @@ main {
         }
       }
 
+
+// Відгуки
+
+.review {
+  .main-title {
+    @extend .main-title;
+  }
+
+  .reviews-block {
+    margin: 158px 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+  }
+
+  .photo-client {
+    margin-bottom: 20px;
+  } 
+
+  .name-person {
+      color: $orangeColor;
+      font-size: 32px;
+      font-weight: 600;
+  }
+
+  .name-person {
+      text-align: center;
+
+  span {
+      margin-bottom: 10px;
+    }
+  }
+}
 
