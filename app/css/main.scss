@@ -336,36 +336,35 @@ header {
 }
 
 // Послуги, які я можу надавати
-
 section {
-    margin-top: 200px; /* Вміст адаптується відступом від верху екрану */
-    text-align: center; // Вирівнювання по центру
+    margin-top: 200px;
+    text-align: center;
 
     .services {
         .main-text {
             color: $orangeColor;
-            font-size: 36px; /* Зменшуємо розмір тексту для менших екранів */
+            font-size: 36px;
             font-weight: 600;
             position: relative;
-            display: inline-block; // Зробити блоком, але залишити ширину тексту
-            margin: 0 auto; // Горизонтальне вирівнювання по центру
+            display: inline-block;
+            margin: 0 auto;
 
             &::after {
                 content: "";
                 position: absolute;
-                left: 35px; /* Зменшуємо відстань від тексту до лінії */
-                bottom: -5px; // Визначає відстань від тексту до лінії
-                width: 75%; // Ширина лінії рівна ширині тексту
-                height: 2px; // Визначає товщину лінії
-                background-color: $orangeColor; // Колір лінії, змініть його на ваш смак
+                left: 35px;
+                bottom: -5px; 
+                width: 75%; 
+                height: 2px;
+                background-color: $orangeColor; 
             }
         }
 
         .services-info {
-            margin-top: 75px; /* Вміст адаптується відступом від верху блоку */
+            margin-top: 75px; 
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Змінюємо кількість колонок та їх розмір залежно від розміру екрану */
-            gap: 103px; /* Зберігаємо відступ між елементами */
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); 
+            gap: 103px; 
 
             .vue,
             .landing,     
@@ -421,7 +420,6 @@ section {
 }
 
 // Розділ про мої проекти
-
 main {
   margin: 180px 0;
   display: flex;
@@ -437,9 +435,9 @@ main {
       }
 
       .portfolio {
-        margin-top: 75px; /* Вміст адаптується відступом від верху блоку */
+        margin-top: 75px; 
         display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Змінюємо кількість колонок та їх розмір залежно від розміру екрану */
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
         gap: 102px;
 
           .landing-page,
@@ -471,87 +469,45 @@ main {
       }
 
 
-.slider {
-  place-items: center;
+// Cлайдер
+.slider-container {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: $whiteColor;
 
-    .section-header {
-        position: relative;
-        text-align: center;
-        font-weight: 900;
-        padding-bottom: 10px;
-        color: $blackColor!important;
-    }
+  .slide-content {
+    .card-wrapper {
+      .card {
+        background-color: $whiteColor;
+        border: 0;
+        border-radius: 25px;
 
-    .section-header span {
-        display: block;
-        font-size: 15px;
-        font-weight: 300;
-    }
+        .image-content {
+          .overlay {
+            .card-image {
+              position: relative;
+              height: 100px;
+              width: 100px;
+              border-radius: 50%;
+              background-color: $orangeColor;
+              padding: 5px;
 
-    .testimonials {
-        max-width: 1000px;
-        padding: 0 15px 50px;
-        margin: 0 auto 80px auto;
-    }
-
-    .single-item {
-        border-radius: 40px!important;
-        color: #111!important;
-        padding: 10px;
-        margin: 30px 15px;
-    }
-
-    .profile {
-        margin-bottom: 30px;
-        text-align: center;    
-    }
-
-    .img-area {
-        margin: 0 15px 15px 15px;
-    }
-
-    .img-area img {
-        height: 200px;
-        width: 200px;
-        border-radius: 50%;
-        border: 7px solid $orangeColor;
-    }
-    .content {
-        font-size: 18px;
-    }
-
-    .content p {
-        color: $orangeColor!important;
-        text-align: justify;
-        margin-top: 30px; 
-
-        @media(max-width: 768px) {
-            margin-top: -10px 0 10px 0;
+              .card-img {
+                height: 100px;
+                width: 100px;
+                object-fit: cover;
+                border-radius: 50%;
+                border: 2px solid $orangeColor;
+              }
+            }
+          }
         }
+      }
     }
-
-    .socials i {
-        margin-right: 25px;
-        color: $blackColor!important;
-    }
-
-    .carousel-control-next-icon, .carousel-control-prev-icon {
-        background-color: $orangeColor;
-    }
-    
-    h1 {
-        color: $whiteColor;
-        text-align: center;
-        font-size: 48px;
-        font-weight: 500;
-        letter-spacing: -1px;
-        margin-bottom: 50px;
-    }
-
-    .img-area {
-        img {
-            align-items: center;
-            border-radius: 351px;
-        }
-    }
+  }
 }
