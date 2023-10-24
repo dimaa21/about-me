@@ -470,41 +470,46 @@ main {
 
 
 // Cлайдер
-.slider-container {
+
+.slide-container {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  min-height: 100vh;
+  min-height: 50vh;
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: $whiteColor;
 
   .slide-content {
+    margin: 0 40px;
+
     .card-wrapper {
       .card {
-        background-color: $whiteColor;
         border: 0;
-        border-radius: 25px;
+        border-radius: 35px;
 
         .image-content {
-          .overlay {
             .card-image {
               position: relative;
-              height: 100px;
-              width: 100px;
+              height: 150px;
+              width: 150px;
               border-radius: 50%;
               background-color: $orangeColor;
               padding: 5px;
 
               .card-img {
-                height: 100px;
-                width: 100px;
+                height: 100%;
+                width: 100%;
                 object-fit: cover;
                 border-radius: 50%;
-                border: 2px solid $orangeColor;
-              }
+                border: 1px solid $orangeColor;
             }
+
+              .card-content {
+                h2, p {
+                  color: $blackColor!important;
+                }
+              }
           }
         }
       }
