@@ -26,6 +26,7 @@ a {
 }
 
 .main-title {
+    text-align: center;
     color: $orangeColor;
     font-size: 36px;
     font-weight: 600;
@@ -503,22 +504,79 @@ main {
 
   .name-person {
       display: flex;
-      text-align: center;
       flex-direction: column;
-      white-space: pre-wrap;
+      gap: 10px;
+      max-width: 600px;
+      margin: 0 auto; 
 
-    .full-review {
-      margin: 0;
-      font-size: 23px;
-      font-weight: 400;
-    }
+      .full-review {
+        color: $whiteColor;
+        font-size: 23px;
+        font-weight: 400;
+      }
 
-    .name-client {
-        margin: 0; 
+      .name-client {
+        color: $orangeColor;
         font-size: 32px;
         font-weight: 600;
-        color: $orangeColor;
-    }  
+      }
   }
 }
+
+// Футер
+.footer {
+  margin-top: 158px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 20px; /* Додайте потрібний відступ з усіх боків */
+}
+
+.form {
+  margin-top: 158px;
+  width: 100%;
+  max-width: 600px;
+  display: grid;
+  grid-template-columns: 1fr; /* Одна колонка */
+  gap: 20px; /* Відстань між рядками */
+
+  .form-input {
+    display: grid;
+    grid-template-columns: 1fr; /* Одна колонка */
+    gap: 10px; /* Відстань між рядками */
+
+    input,
+    button {
+      width: 100%;
+    }
+  }
+
+  .orange-line {
+    height: 2px;
+    background-color: #FFA500;
+    margin: 20px 0;
+  }
+
+  .info {
+    display: grid;
+    grid-template-columns: 1fr; /* Одна колонка */
+    gap: 10px;
+
+    p {
+      font-weight: bold;
+    }
+
+    span {
+      display: block;
+    }
+
+    img {
+      max-width: 30px;
+      margin-right: 10px;
+    }
+  }
+}
+
+
 
