@@ -492,7 +492,7 @@ main {
     align-items: center;
 
     @media(max-width: 999px) {
-      dispaly: flex;
+      display: flex;
       flex-direction: column;
     }
 
