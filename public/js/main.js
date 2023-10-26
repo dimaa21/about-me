@@ -23,15 +23,5 @@ $(".header-top .menu").on("click", function() {
     $("header .mobile-menu").slideToggle();
 })
 
-document.addEventListener('DOMContentLoaded', function () {
-  var mySwiper = new Swiper('.swiper-container', {
-    slidesPerView: 1,
-    spaceBetween: 20,
-    navigation: {
-      nextEl: '.swiper-button-next',
-      prevEl: '.swiper-button-prev',
-    },
-  });
-});
 
 
