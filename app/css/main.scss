@@ -289,10 +289,14 @@ header {
                     border-radius: 7px;
                     font-size: 20px;
                     padding: 10px 20px;
+
+                    a {
+                      color: $whiteColor;
+                    }
                 }
 
                 .hire {
-                    color: #000;
+                    color: $whiteColor;
                     background-color: $orangeColor;
                     border: 2px solid #000;
                     transition: background-color 0.3s, color 0.3s, transform 0.3s;
@@ -622,7 +626,7 @@ main {
 
               &.third-button {
                 padding: 15px 30px;
-              }
+              }   
             }
 
             button {
@@ -634,7 +638,7 @@ main {
     .input-button {
       display: flex;
       flex-direction: column;
-
+  
         input {
           margin: 40px 0;
           padding: 25px 150px;
@@ -714,7 +718,7 @@ main {
     margin-top: 83px;
     padding: 50px 0;
 
-    @media(max-width: 600px) {
+    @media(max-width: 550px) {
         display: flex;
         flex-wrap: wrap;
     }
