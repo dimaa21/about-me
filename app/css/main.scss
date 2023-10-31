@@ -540,8 +540,7 @@ main {
     display: flex;
     flex-direction: column;
     gap: 10px;
-    max-width: 80%;
-    margin: 0 auto;
+    width: 80%;
 
     .full-review {
       text-align: justify;
@@ -549,7 +548,6 @@ main {
       color: $whiteColor;
       font-size: 23px;
       font-weight: 400;
-      max-width: 645px;
     }
 
     .name-line {
@@ -570,7 +568,6 @@ main {
         font-weight: 600;
         position: relative;
         display: inline-block;
-        padding-right: 100px;
       }
     }
   }
