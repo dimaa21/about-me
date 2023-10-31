@@ -485,7 +485,7 @@ main {
 
   .reviews-block {
     padding: 0 5%;
-    margin-top: 5%; /* Замініть на відносне значення */
+    margin-top: 5%;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -498,19 +498,19 @@ main {
   }
 
   .photo-client {
-    margin-bottom: 20px;
+    margin: 20px 50px;
   }
 
   .name-person {
     display: flex;
     flex-direction: column;
     gap: 10px;
-    max-width: 80%; /* Замініть на відносне значення */
+    max-width: 80%;
     margin: 0 auto;
 
     .full-review {
       color: $whiteColor;
-      font-size: 2em; /* Замініть на відносне значення */
+      font-size: 23px;
       font-weight: 400;
     }
 
@@ -519,7 +519,8 @@ main {
       align-items: center;
 
       .orange-line {
-        width: 40%; /* Замініть на відносне значення */
+        margin: 0 auto;
+        width: 30%;
         height: 6px;
         background: $orangeColor;
       }
@@ -527,24 +528,13 @@ main {
       .name-client {
         text-align: center;
         color: $orangeColor;
-        font-size: 3em; /* Замініть на відносне значення */
+        font-size: 2em;
         font-weight: 600;
         position: relative;
         display: inline-block;
         margin: 0 auto;
       }
     }
-  }
-}
-
-// Футер
-
-.footer {
-  margin-top: 158px;
-
-  .main-text {
-    text-align: center;
-    @extend .main-title;
   }
 }
 
