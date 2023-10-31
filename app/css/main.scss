@@ -568,6 +568,11 @@ main {
         font-weight: 600;
         position: relative;
         display: inline-block;
+        padding-right: 100px;
+
+        @media(max-width: 768px) {
+          padding: 0;
+        }
       }
     }
   }
@@ -650,12 +655,14 @@ main {
             padding: 15px 50px;
             font-size: 18px;
             font-weight: 800;
+            border: 7px solid $orangeColor;
             border-radius: 7px;
             background: $orangeColor;
             transition: background-color 0.3s, color 0.3s, transform 0.3s;
 
           &:hover {
             color: $blackColor;
+            background-color: $orangeColor;
             transform: translateY(-5px);
           }
         }
