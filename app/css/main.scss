@@ -92,7 +92,7 @@ header {
 
           &::after {
             content: "";
-            width: 0%;
+            width: 0;
             display: block;
             background-color: $whiteColor;
             height: 2px;
@@ -298,7 +298,7 @@ header {
     }
 }
 
-    // Основна частина
+// Основна частина
 .about-me {
   margin-top: 100px;
   @extend .flex;
@@ -509,9 +509,12 @@ main {
     margin: 0 auto;
 
     .full-review {
+      text-align: justify;
+      text-justify: inter-word;
       color: $whiteColor;
       font-size: 23px;
       font-weight: 400;
+      max-width: 645px;
     }
 
     .name-line {
@@ -532,11 +535,163 @@ main {
         font-weight: 600;
         position: relative;
         display: inline-block;
-        margin: 0 auto;
+        padding-right: 100px;
       }
     }
   }
 }
 
 
+// Форма
+.form {
+  .main-form {
+    display: flex;
+    margin-top: 131px;
+    justify-content: space-around;
+
+    @media(max-width: 996px) {
+      flex-direction: column;
+      align-items: center;
+
+      .straight-orange-line {
+        display: none;
+      }
+
+      .info,
+      .social {
+        display: flex;
+        align-items: center;
+        justify-content: center!important;
+        text-align: center!important;
+      }
+  }
+
+        @media (max-width: 600px) {
+          flex-direction: column;
+          align-items: center;
+
+          .input-button {
+            display: flex;
+            flex-direction: column;
+
+            .input {
+              margin: 20px 0;
+              padding: 15px 30px;
+              border-radius: 7px;
+              background: $blackColor;
+              border: 2px solid $orangeColor;
+              opacity: 0.8;
+              color: $orangeColor;
+
+              &.third-button {
+                padding: 15px 30px;
+              }
+            }
+
+            button {
+              padding: 15px 30px;
+            }
+          }
+        }
+
+    .input-button {
+      display: flex;
+      flex-direction: column;
+
+        input {
+          margin: 40px 0;
+          padding: 25px 150px;
+          flex-shrink: 0;
+          border-radius: 7px;
+          background: $blackColor;
+          border: 4px solid $orangeColor;
+          opacity: 0.8;
+          color: $orangeColor;
+        }
+
+        .third-button {
+            padding: 35px 150px;
+        }
+
+        .button {
+            color: $blackColor;
+            padding: 15px 50px;
+            font-size: 18px;
+            font-weight: 800;
+            border-radius: 7px;
+            background: $orangeColor;
+            transition: background-color 0.3s, color 0.3s, transform 0.3s;
+
+          &:hover {
+            color: $blackColor;
+            transform: translateY(-5px);
+          }
+        }
+      }
+
+    .straight-orange-line {
+      margin-top: 75px;
+      width: 1px;
+      height: 456px;
+      opacity: 0.7;
+      background: $orangeColor;
+    }
+
+      .info {
+        margin-top: 30px;
+        text-align: justify;
+        text-justify: inter-word;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-gap: 10px;
+
+        .orange-text, .simple-text {
+          font-size: 25px;
+        }
+
+        .orange-text {
+          color: $orangeColor;
+        }
+
+        .simple-text {
+          color: $whiteColor;
+        }
+
+.social {
+  display: flex;
+  justify-content: flex-start;
+
+        .linkedin,
+        .github,
+        .telegram {
+          position: relative;
+          overflow: hidden;
+          width: 50px;
+          height: 50px;
+
+          a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            height: 100%;
+            color: #fff;
+            border: 2px solid transparent;
+            transition: transform 0.3s ease;
+
+            img {
+              margin-left: -20px;
+              border-radius: 50%;
+              width: 30px;
+            }
+
+            &:hover {
+              transform: scale(1.1) translateY(-5px);
+            }
+          }
+        }
+      }
+    }
+  }
+}
 
