@@ -410,9 +410,9 @@ section {
             grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); 
             gap: 103px; 
 
-            .vue,
+            .adaptive,
             .landing,     
-            .laravel {
+            .optimization {
                 padding: 20px;
                 text-align: center;
                 border-radius: 9px;
@@ -428,7 +428,7 @@ section {
                 }
             }
 
-            .vue {
+            .adaptive {
                 height: auto; 
                 .name-services {
                     margin-top: 20px;
@@ -436,11 +436,11 @@ section {
             }
 
             .landing, 
-            .laravel {
+            .optimization {
                 height: auto;
             }
 
-            .laravel {
+            .optimization {
                 img {
                     border-radius: 50%;
                 }
@@ -641,7 +641,7 @@ main {
   
         input {
           margin: 40px 0;
-          padding: 25px 150px;
+          padding: 25px 75px;
           flex-shrink: 0;
           border-radius: 6px;
           background: $blackColor;
@@ -651,7 +651,7 @@ main {
         }
 
         .third-button {
-            padding: 35px 150px;
+            padding: 35px 75px;
         }
 
         .button {
