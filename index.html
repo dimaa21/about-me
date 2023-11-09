@@ -7,6 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>About Me</title>
     <link rel="icon" type="image/x-icon" href="./public/img/icon.ico">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/js/bootstrap.bundle.min.js">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
     <link rel="stylesheet" href="./public/css/main.min.css">
@@ -70,7 +71,7 @@
                 <div class="second-block">
                     <p class="hello">Hello, I am</p>
                     <h1 class="name">Dmytro</h1>
-                    <span class="position">Vue | Laravel Developer</span>
+                    <span class="position">Front-End Developer</span>
                     <div class="button">
                         <button class="hire">
                             <a href="" onclick="return slowScroll('.form')">Hire me</a>        
@@ -98,13 +99,45 @@
                     <div class="info">
                         <h1>About me</h1>
                         <p class="desc">Hi, I'm Dmytro, and I'm a young and ambitious developer from Ivano-Frankivsk.<br>
-                            I am 23 years old and I specialize in website development using two
-                            powerful technologies - Vue.js and Laravel.<br><br>
+                            I am 23 years old and I specialize in website development.<br><br>
                         </p>
                     </div>
                 </div>
             </div>
     </section>
+
+        <div class="container my-5">
+    <h1></h1>
+    <div class="row">
+        <div class="col-md-4">
+            <div class="card mb-4 shadow-sm">
+                <img src="https://assetmanagerpim-res.cloudinary.com/images/w_800/q_90/cba93107e0c9418fa8e2af1e01880ec6_9366/H06509_01_standard.WebP" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">Adidas Originals NITEBALL</h5>
+                    <p class="card-text">The Adidas Originals collection is based on the use of the best materials.</p>
+                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#myModal-1">Open full description</button>
+
+      <div class="modal fade" id="myModal-1" role="dialog">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-bs-dismiss="modal">&times;</button>
+          <h4 class="modal-title"></h4>
+        </div>
+        <div class="modal-body">
+          <img src="https://assetmanagerpim-res.cloudinary.com/images/w_800/q_90/cba93107e0c9418fa8e2af1e01880ec6_9366/H06509_01_standard.WebP" class="card-img-top" alt="...">
+          <h3 class="mt-3 text-center">Adidas Originals NITEBALL</h3>
+          <p>Embodying the playful spirit that defines basketball culture, these adidas Niteball sneakers provide a boost of energy for day and night. The leather and suede upper lends a casual feel, while the iconic three stripes add a fresh pop of color. The Lightstrike midsole delivers ultra-lightweight cushioning for a new level of speed. Wear these sneakers any day of the week for a sense of confidence and style.</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
+            </div>
+          </div>    
+       </div>
+      </div>
+    </div>
+  </div>
+</div>
 
     <!-- Послуги -->
     <section>
@@ -115,20 +148,20 @@
 
                 <div class="landing">
                     <img src="./public/img/html_info.png" alt="">
-                    <p class="name-services">Landing page layout</p>
+                    <p class="name-services">Landing page</p>
                     <span>A well-designed landing page will create a pleasant impression for the client</span>
                 </div>
 
-                <div class="vue">
-                    <img src="./public/img/vue_info.png" alt="">
-                    <p class="name-services">Vue</p>
-                    <span class="vue-info">Vue.js empowers dynamic, responsive, and interactive website development with ease.</span>
+                <div class="adaptive">
+                    <img src="./public/img/adaptive.png" alt="">
+                    <p class="name-services">Adaptive for each device</p>
+                    <span class="adaptive-info">Adaptive layout for a beautiful image of your application on any device</span>
                 </div>
 
-                <div class="laravel">
-                    <img src="./public/img/laravel-info.png" alt="">
-                    <p class="name-services">Laravel</p>
-                    <span>Laravel simplifies web development, offering features for efficient, secure sites.</span>
+                <div class="optimization">
+                    <img src="./public/img/optimize.png" alt="">
+                    <p class="name-services">Performance optimization</p>
+                    <span>Code optimization for fast performance of your application</span>
                 </div>
             </div>
         </div>
@@ -270,6 +303,8 @@
     <script src="https://kit.fontawesome.com/c41c99b4cf.js" crossorigin="anonymous"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
     <script src="./public/js/main-min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
 
 </body>
 </html>
