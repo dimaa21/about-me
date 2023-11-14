@@ -9,7 +9,7 @@ document.addEventListener('DOMContentLoaded', function () {
 function slowScroll(id) {
     $("html, body").animate({
         scrollTop: $(id).offset().top - 50
-    }, 500);
+    }, 501);
     return false;
 }
 
