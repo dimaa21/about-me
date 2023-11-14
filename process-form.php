@@ -4,18 +4,21 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $email = $_POST["email"];
     $message = $_POST["message"];
 
-    // Виконайте код для відправки електронної пошти на вашу пошту тут
-    // Використайте, наприклад, функцію mail() або сторонню бібліотеку, таку як PHPMailer
+    // Тут виконайте логіку відправлення електронного листа, наприклад, використовуючи функцію mail().
 
-    // Приклад з використанням mail():
+    // Приклад:
     $to = "dimasukgaborak@gmail.com";
-    $subject = "New Email";
+    $subject = "Нове повідомлення від $name";
     $headers = "From: $email";
+    $body = "Повідомлення від $name:\n\n$message";
 
-    mail($to, $subject, $message, $headers);
-
-    echo "success";
+    if (mail($to, $subject, $body, $headers)) {
+        echo "Дякуємо! Ваше повідомлення успішно відправлено.";
+    } else {
+        echo "Помилка при відправці повідомлення. Спробуйте ще раз.";
+    }
 } else {
-    echo "error";
+    echo "Невірний метод запиту.";
 }
+
 
