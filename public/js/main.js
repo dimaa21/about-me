@@ -9,7 +9,7 @@ document.addEventListener('DOMContentLoaded', function () {
 function slowScroll(id) {
     $("html, body").animate({
         scrollTop: $(id).offset().top - 50
-    }, 500);
+    }, 501);
     return false;
 }
 
@@ -22,23 +22,6 @@ $(".header-top .menu").on("click", function() {
 
     $("header .mobile-menu").slideToggle();
 })
-
-
-    function submitForm() {
-      var formData = $('#contactForm').serialize();
-
-      $.ajax({
-        type: 'POST',
-        url: 'process-form.php', // Замініть це на шлях до вашого серверного скрипта
-        data: formData,
-        success: function(response) {
-          alert('Form submitted successfully!');
-        },
-        error: function(error) {
-          alert('Error submitting form.');
-        }
-      });
-    }
 
 
 
