@@ -23,6 +23,17 @@ $(".header-top .menu").on("click", function() {
     $("header .mobile-menu").slideToggle();
 })
 
+const sr = ScrollReveal({
+    origin: 'top',
+    distance: '30px',
+    duration: 2000,
+    reset: true
+});
+
+sr.reveal(`.header-main, .about-me,
+            .services, .form`, {
+    interval: 200
+})
 
 
 
