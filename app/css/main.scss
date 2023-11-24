@@ -588,7 +588,9 @@ main {
   .main-form {
     display: flex;
     margin-top: 131px;
-    justify-content: space-around;
+  	flex-direction: row;
+	  justify-content: center;
+	  align-items: center;
 
     @media(max-width: 996px) {
       flex-direction: column;
@@ -616,7 +618,7 @@ main {
             flex-direction: column;
 
             .input {
-              margin: 20px 0;
+              margin: 25px 0;
               padding: 15px 30px;
               border-radius: 7px;
               background: $blackColor;
@@ -640,7 +642,7 @@ main {
       flex-direction: column;
   
         input {
-          margin: 40px 0;
+          margin: 30px 0;
           padding: 25px 75px;
           flex-shrink: 0;
           border-radius: 6px;
@@ -673,7 +675,7 @@ main {
       }
 
     .straight-orange-line {
-      margin-top: 75px;
+      margin: 75px 100px;
       width: 1px;
       height: 456px;
       opacity: 0.7;
