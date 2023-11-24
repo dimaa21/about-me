@@ -31,7 +31,7 @@ const sr = ScrollReveal({
 });
 
 sr.reveal(`.header-main, .about-me,
-            .services, .form`, {
+            .services, .project, .review, .form`, {
     interval: 200
 })
 
