@@ -396,11 +396,17 @@ header {
 
 // Блок з стеком технологій
 .my-stack {
+      text-align: center;
+      width: 100%;
+
       .main-title {
         @extend .main-title;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
 
         &:after {
-          width: 65%;
+          width: 0;
         }
       }
 
@@ -410,15 +416,29 @@ header {
           img {
             padding: 0 5px;
             transition: all 0.3s ease;
+            margin: 10px;
 
             &:hover {
               transform: scale(1.1) translateY(-5px);
             }
           }
 
-          .bootstrap {
-              border-radius: 50%;
+          .bootstrap,
+          .gulp {
+              border-radius: 70%;
           }
+      }
+
+      @media screen and (max-width: 600px) {
+        .img-stack img {
+          margin: 5px;
+        }
+      }
+
+      @media screen and (max-width: 400px) {
+        .img-stack img {
+          margin: 3px;
+        }
       }
 }
 
@@ -542,9 +562,7 @@ main {
         }
       }
 
-
 // Відгуки
-
 .review {
   .main-title {
     @extend .main-title;
@@ -610,7 +628,6 @@ main {
   }
 }
 
-
 // Форма
 .form {
   .main-form {
@@ -641,7 +658,7 @@ main {
           flex-direction: column;
           align-items: center;
 
-          .input-button {
+          .form-body {
             display: flex;
             flex-direction: column;
 
@@ -665,7 +682,7 @@ main {
           }
         }
 
-    .input-button {
+    .form-body {
       display: flex;
       flex-direction: column;
   
