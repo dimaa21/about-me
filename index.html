@@ -109,17 +109,19 @@
     <section class="my-stack">
         <p class="main-title">My Stack</p>
             <div class="img-stack">
-                <img src="/public/img/html.png" alt="">
-                <img src="/public/img/css.png" alt="">
-                <img src="/public/img/sass.png" alt="">
-                <img src="/public/img/bootstrap.png" class="bootstrap" alt="">
-                <img src="/public/img/js.png" alt="">
-                <img src="/public/img/jquery.png" alt="">
-                <img src="/public/img/php.png" alt="">
-                <img src="/public/img/gulp.png" alt="">
-                <img src="/public/img/figma.png" alt="">
-                <img src="/public/img/git.png" alt="">
-                <img src="/public/img/webstorm.png" alt="">
+
+                <div class="main-stack">
+                    <img src="/public/img/html.png" alt="">
+                    <img src="/public/img/css.png" alt="">
+                    <img src="/public/img/sass.png" alt="">
+                    <img src="/public/img/bootstrap.png" class="bootstrap" alt="">
+                    <img src="/public/img/js.png" alt="">
+                    <img src="/public/img/jquery.png" alt="">
+                    <img src="/public/img/php.png" alt="">
+                    <img src="/public/img/gulp.png" class="gulp" alt="">
+                    <img src="/public/img/figma_2.png" alt="">
+                    <img src="/public/img/github.png" alt="">
+                </div>
             </div>
     </section>
 
@@ -211,43 +213,12 @@
       </div>
       <div class="form-container">
         <div class="main-form">
-            <div class="input-button">
-                <label>
-                    <input class="input" type="text" name="name" id="name" placeholder="Name">
-                </label>
-                <label>
-                    <input class="input" type="email" name="email" id="email" placeholder="Email">
-                </label>
-                <label>
-                    <input class="third-button input" type="text" name="message" id="message" placeholder="Message">
-                </label>
-                <button class="button" type="button" onclick="submitForm()">Submit</button>
-            </div>
-
-            <div id="result-message"></div>
-
-            <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
-
-            <script>
-                function submitForm() {
-                    var name = $("#name").val();
-                    var email = $("#email").val();
-                    var message = $("#message").val();
-
-                    $.ajax({
-                        type: "POST",
-                        url: "process_form.php", // Замініть на шлях до вашого серверного скрипта
-                        data: {
-                            name: name,
-                            email: email,
-                            message: message
-                        },
-                        success: function(response) {
-                            $("#result-message").html(response);
-                        }
-                    });
-                }
-            </script>
+                <form action="" id="form" class="form-body">
+                        <input class="input" type="text" name="name" id="name" placeholder="Name">
+                        <input class="input" type="email" name="email" id="email" placeholder="Email">
+                        <input class="third-button input" type="text" name="message" id="message" placeholder="Message">
+                    <button class="button" type="button">Submit</button>
+                </form>
 
           <div class="straight-orange-line"></div>
 
