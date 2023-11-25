@@ -394,6 +394,34 @@ header {
   }
 }
 
+// Блок з стеком технологій
+.my-stack {
+      .main-title {
+        @extend .main-title;
+
+        &:after {
+          width: 65%;
+        }
+      }
+
+      .img-stack {
+          margin-top: 50px;
+
+          img {
+            padding: 0 5px;
+            transition: all 0.3s ease;
+
+            &:hover {
+              transform: scale(1.1) translateY(-5px);
+            }
+          }
+
+          .bootstrap {
+              border-radius: 50%;
+          }
+      }
+}
+
 // Послуги, які я можу надавати
 section {
     margin-top: 200px;
@@ -589,8 +617,8 @@ main {
     display: flex;
     margin-top: 131px;
   	flex-direction: row;
-	  justify-content: center;
-	  align-items: center;
+    justify-content: center;
+    align-items: center;
 
     @media(max-width: 996px) {
       flex-direction: column;
