@@ -23,6 +23,7 @@ $(".header-top .menu").on("click", function() {
     $("header .mobile-menu").slideToggle();
 })
 
+// Скрол ефект при наведенні на певний блок
 const sr = ScrollReveal({
     origin: 'top',
     distance: '30px',
@@ -34,6 +35,8 @@ sr.reveal(`.header-main, .about-me, .my-stack,
             .services, .project, .review, .form`, {
     interval: 200
 })
+
+
 
 
 
