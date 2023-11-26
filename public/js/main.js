@@ -39,5 +39,3 @@ sr.reveal(`.header-main, .about-me, .my-stack,
 
 
 
-
-
