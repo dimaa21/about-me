@@ -19,4 +19,4 @@ Feel free to explore the code, use it for your projects, or provide feedback for
 
 This repository may be periodically updated to enhance functionality and incorporate new features.
 
-
+<a href="https://dimaa21.github.io/about-me/">You can view the site by clicking here: </a>
