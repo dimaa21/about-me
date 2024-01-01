@@ -19,5 +19,5 @@ Feel free to explore the code, use it for your projects, or provide feedback for
 
 This repository may be periodically updated to enhance functionality and incorporate new features.
 
-Visit [My Website]([https://your-website-url.com](https://dimaa21.github.io/about-me/") to see the live version.
+<a href="https://dimaa21.github.io/about-me/">Visit to see the live version.</a>
 
