@@ -22,5 +22,14 @@
     "node-sass": "^9.0.0",
     "rename": "^1.0.4",
     "sass": "^1.69.3"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dimaa21/about-me.git"
+  },
+  "keywords": [],
+  "bugs": {
+    "url": "https://github.com/dimaa21/about-me/issues"
+  },
+  "homepage": "https://github.com/dimaa21/about-me#readme"
 }
