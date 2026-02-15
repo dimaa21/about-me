@@ -1,158 +1,189 @@
 <!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
+    />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>About Me</title>
-    <link rel="icon" type="image/x-icon" href="./public/img/icon.ico">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
-    <link rel="stylesheet" href="./public/css/main.min.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
-</head>
-<body>
-
+    <link rel="icon" type="image/x-icon" href="./public/img/icon.ico" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css"
+      integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="./public/css/main.min.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+  </head>
+  <body>
     <!-- Шапка -->
     <header>
-        <div class="container">
-            <!-- Шапка верхній текст -->
-            <div class="header-top">
-                <span class="logo"><img src="./public/img/logo.png" alt=""></span>
-                <div class="menu"><i class="fas fa-bars"></i></div>
-                <ul>
-                    <!-- При натисканні буде перекидати на ту частину сайту -->
-                    <li><a href="" onclick="return slowScroll('.header-main')">Home</a></li>
-                    <li><a href="" onclick="return slowScroll('.about-me')">About</a></li>
-                    <li><a href="" onclick="return slowScroll('.services')">Services</a></li>
-                    <!-- <li><a href="" onclick="return slowScroll('.form')">Contact</a></li> -->
-                </ul>
-            </div>
+      <div class="container">
+        <!-- Шапка верхній текст -->
+        <div class="header-top">
+          <span class="logo"><img src="./public/img/logo.png" alt="" /></span>
+          <div class="menu"><i class="fas fa-bars"></i></div>
+          <ul>
+            <!-- При натисканні буде перекидати на ту частину сайту -->
+            <li>
+              <a href="" onclick="return slowScroll('.header-main');">Home</a>
+            </li>
+            <li>
+              <a href="" onclick="return slowScroll('.about-me');">About</a>
+            </li>
+            <li>
+              <a href="" onclick="return slowScroll('.services');">Services</a>
+            </li>
+            <!-- <li><a href="" onclick="return slowScroll('.form')">Contact</a></li> -->
+          </ul>
+        </div>
 
-            <div class="mobile-menu">
-                    <ul>
-                        <!-- При натисканні буде перекидати на ту частину сайту -->
-                        <li><a href="" onclick="return slowScroll('.header-main')">Home</a></li>
-                        <li><a href="" onclick="return slowScroll('.about-me')">About</a></li>
-                        <li><a href="" onclick="return slowScroll('.services')">Services</a></li>
-                        <!-- <li><a href="" onclick="return slowScroll('.form')">Contact</a></li> -->
-                    </ul>
-            </div>
+        <div class="mobile-menu">
+          <ul>
+            <!-- При натисканні буде перекидати на ту частину сайту -->
+            <li>
+              <a href="" onclick="return slowScroll('.header-main');">Home</a>
+            </li>
+            <li>
+              <a href="" onclick="return slowScroll('.about-me');">About</a>
+            </li>
+            <li>
+              <a href="" onclick="return slowScroll('.services');">Services</a>
+            </li>
+            <!-- <li><a href="" onclick="return slowScroll('.form')">Contact</a></li> -->
+          </ul>
+        </div>
 
         <div class="container header-main">
-
-            <div class="first-block">
+          <div class="first-block">
             <div class="white-line-high"></div>
 
             <div class="header-social">
-                    <div class="linkedin">
-                        <a href="https://www.linkedin.com/in/dmytro-haborak-3174a2261/">
-                            <img src="./public/img/linkedin.png" alt="">
-                        </a>
-                    </div>
+              <div class="linkedin">
+                <a href="https://www.linkedin.com/in/dmytro-haborak-3174a2261/">
+                  <img src="./public/img/linkedin.png" alt="" />
+                </a>
+              </div>
 
-                    <div class="github">
-                        <a href="https://github.com/dimaa21">
-                            <img src="./public/img/github.png" alt="">
-                        </a>
-                    </div>
+              <div class="github">
+                <a href="https://github.com/dimaa21">
+                  <img src="./public/img/github.png" alt="" />
+                </a>
+              </div>
 
-                    <div class="telegram">
-                    <a href="https://t.me/dimaa_g">
-                            <img src="./public/img/telegram.png" alt="">
-                       </a>
-                    </div>
-                </div>
-
-                    <div class="white-line-low"></div>
-                </div>
-
-                <div class="second-block">
-                    <p class="hello">Hello, I am</p>
-                    <h1 class="name">Dmytro</h1>
-                    <span class="position">
-                        Frond-End Developer<br>
-                    </span>
-                    <div class="button">
-                        <button class="hire">
-                            <a href="" onclick="return slowScroll('.form')">Hire me</a>        
-                        </button>
-
-                        <button class="more">
-                            <a href="" onclick="return slowScroll('.services')">Know more!</a> 
-                        </button>
-                    </div>
-                </div>
-                <div class="third-block">
-                    <img src="./public/img/hacker.png" alt="">
-                </div>
+              <div class="telegram">
+                <a href="https://t.me/dimaa_g">
+                  <img src="./public/img/telegram.png" alt="" />
+                </a>
+              </div>
             </div>
+
+            <div class="white-line-low"></div>
+          </div>
+
+          <div class="second-block">
+            <p class="hello">Hello, I am</p>
+            <h1 class="name">Dmytro</h1>
+            <span class="position"> Frond-End Developer<br /> </span>
+            <div class="button">
+              <button class="hire">
+                <a href="" onclick="return slowScroll('.form');">Hire me</a>
+              </button>
+
+              <button class="more">
+                <a href="" onclick="return slowScroll('.services');"
+                  >Know more!</a
+                >
+              </button>
+            </div>
+          </div>
+          <div class="third-block">
+            <img src="./public/img/hacker.png" alt="" />
+          </div>
         </div>
+      </div>
     </header>
 
     <!-- Основна частина сайту -->
     <section class="about-me">
-        <div class="container">
-            <div class="block">
-                <!-- <div class="order-mobile">
-                    <img src="./public/img/me.png" alt="Фото програми"> 
-                </div> -->
-                    <div class="info">
-                        <h1>About me</h1>
-                        <p class="desc">Hi, I'm Dmytro, and I'm a young and ambitious developer from Ivano-Frankivsk.<br>
-                            I am 25 years old and I specialize in website development.<br><br>
-                        </p>
-                    </div>
-                </div>
-            </div>
+      <div class="container">
+        <div class="block">
+          <div class="order-mobile">
+            <img src="./public/img/about-block.png" alt="Фото програми" />
+          </div>
+          <div class="info">
+            <h1>About me</h1>
+            <p class="desc">
+              Hi, I'm Dmytro, and I'm a young and ambitious developer from
+              Ivano-Frankivsk.<br />
+              I am 25 years old and I specialize in website development.<br /><br />
+            </p>
+          </div>
+        </div>
+      </div>
     </section>
 
     <section class="my-stack">
-        <p class="main-title">My Stack</p>
-            <div class="img-stack">
-
-                <div class="main-stack">
-                    <img src="./public/img/html.png" alt="">
-                    <img src="./public/img/css.png" alt="">
-                    <img src="./public/img/sass.png" alt="">
-                    <img src="./public/img/bootstrap.png" class="bootstrap" alt="">
-                    <img src="./public/img/js.png" alt="">
-                    <img src="./public/img/jquery.png" alt="">
-                    <img src="./public/img/php.png" alt="">
-                    <img src="./public/img/gulp.png" class="gulp" alt="">
-                    <img src="./public/img/figma_2.png" alt="">
-                    <img src="./public/img/github.png" alt="">
-                </div>
-            </div>
+      <p class="main-title">My Stack</p>
+      <div class="img-stack">
+        <div class="main-stack">
+          <img src="./public/img/html.png" alt="" />
+          <img src="./public/img/css.png" alt="" />
+          <img src="./public/img/sass.png" alt="" />
+          <img src="./public/img/bootstrap.png" class="bootstrap" alt="" />
+          <img src="./public/img/js.png" alt="" />
+          <img src="./public/img/jquery.png" alt="" />
+          <img src="./public/img/php.png" alt="" />
+          <img src="./public/img/gulp.png" class="gulp" alt="" />
+          <img src="./public/img/figma_2.png" alt="" />
+          <img src="./public/img/github.png" alt="" />
+        </div>
+      </div>
     </section>
 
     <!-- Послуги -->
     <section>
-        <div class="container services">
-            <p class="main-text">SERVICES I OFFER</p>
+      <div class="container services">
+        <p class="main-text">SERVICES I OFFER</p>
 
-            <div class="container services-info">
+        <div class="container services-info">
+          <div class="landing">
+            <img src="./public/img/info1.png" alt="" />
+            <p class="name-services">Landing page</p>
+            <span
+              >A well-designed landing page will create a pleasant impression
+              for the client</span
+            >
+          </div>
 
-                <div class="landing">
-                    <img src="./public/img/info1.png" alt="">
-                    <p class="name-services">Landing page</p>
-                    <span>A well-designed landing page will create a pleasant impression for the client</span>
-                </div>
+          <div class="adaptive">
+            <img src="./public/img/info2.png" alt="" />
+            <p class="name-services">Adaptive for each device</p>
+            <span class="adaptive-info"
+              >Adaptive layout for a beautiful image of your application on any
+              device</span
+            >
+          </div>
 
-                <div class="adaptive">
-                    <img src="./public/img/info2.png" alt="">
-                    <p class="name-services">Adaptive for each device</p>
-                    <span class="adaptive-info">Adaptive layout for a beautiful image of your application on any device</span>
-                </div>
-
-                <div class="optimization">
-                    <img src="./public/img/info3.png" alt="">
-                    <p class="name-services">Performance optimization</p>
-                    <span>Code optimization for fast performance of your application</span>
-                </div>
-            </div>
+          <div class="optimization">
+            <img src="./public/img/info3.png" alt="" />
+            <p class="name-services">Performance optimization</p>
+            <span
+              >Code optimization for fast performance of your application</span
+            >
+          </div>
         </div>
+      </div>
     </section>
 
     <!-- Портфоліо -->
@@ -162,27 +193,26 @@
           <p>My Portfolio</p>
         </div>
         <div class="portfolio">
-
           <div class="landing-page">
             <p>Website</p>
-                <a href="https://dimaa21.github.io/website-halloween/">
-                    <img src="./public/img/portfolio2.png" alt="">
-                </a>
-            </div>
-            
+            <a href="https://dimaa21.github.io/website-halloween/">
+              <img src="./public/img/portfolio2.png" alt="" />
+            </a>
+          </div>
+
           <div class="landing-page">
             <p>Landing page</p>
-              <a href="https://dimaa21.github.io/landing-page/">
-                 <img src="./public/img/portfolio1.png" alt="">
-              </a>
+            <a href="https://dimaa21.github.io/landing-page/">
+              <img src="./public/img/portfolio1.png" alt="" />
+            </a>
           </div>
 
           <div class="landing-page">
             <p>Website</p>
             <div class="block">
-                <a href="https://dimaa21.github.io/website-restaurant/">
-                    <img src="./public/img/portfolio3.png" alt="">
-                </a>
+              <a href="https://dimaa21.github.io/website-restaurant/">
+                <img src="./public/img/portfolio3.png" alt="" />
+              </a>
             </div>
           </div>
         </div>
@@ -367,40 +397,42 @@
             </div>
         </div>
     </section> -->
-    
 
     <footer class="footer">
-        <div class="container info-social">
-            <div class="name">
-                <p>Created by Dmytro Haborak</p>
-            </div>
+      <div class="container info-social">
+        <div class="name">
+          <p>Created by Dmytro Haborak</p>
+        </div>
 
-            <div class="social">
-                    <div class="linkedin">
-                        <a href="https://www.linkedin.com/in/dmytro-haborak-3174a2261/">
-                            <img src="./public/img/linkedin.png" alt="">
-                        </a>
-                    </div>
+        <div class="social">
+          <div class="linkedin">
+            <a href="https://www.linkedin.com/in/dmytro-haborak-3174a2261/">
+              <img src="./public/img/linkedin.png" alt="" />
+            </a>
+          </div>
 
-                    <div class="github">
-                        <a href="https://github.com/dimaa21">
-                            <img src="./public/img/github.png" alt="">
-                        </a>
-                    </div>
+          <div class="github">
+            <a href="https://github.com/dimaa21">
+              <img src="./public/img/github.png" alt="" />
+            </a>
+          </div>
 
-                    <div class="telegram">
-                    <a href="https://t.me/dimaaa_g">
-                            <img src="./public/img/telegram.png" alt="">
-                       </a>
-                    </div>
-                </div>
-            </div>
+          <div class="telegram">
+            <a href="https://t.me/dimaaa_g">
+              <img src="./public/img/telegram.png" alt="" />
+            </a>
+          </div>
+        </div>
+      </div>
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="https://unpkg.com/scrollreveal"></script>
-    <script src="https://kit.fontawesome.com/c41c99b4cf.js" crossorigin="anonymous"></script>
+    <script
+      src="https://kit.fontawesome.com/c41c99b4cf.js"
+      crossorigin="anonymous"
+    ></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
     <script src="./public/js/main-min.js"></script>
-</body>
+  </body>
 </html>
