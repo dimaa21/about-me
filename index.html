@@ -2,10 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta
-      name="viewport"
-      content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
-    />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>About Me</title>
     <link rel="icon" type="image/x-icon" href="./public/img/icon.ico" />
@@ -29,12 +26,10 @@
     <!-- Шапка -->
     <header>
       <div class="container">
-        <!-- Шапка верхній текст -->
         <div class="header-top">
-          <span class="logo"><img src="./public/img/logo.png" alt="" /></span>
+          <span class="logo"><img src="./public/img/logo.png" alt="Logo" /></span>
           <div class="menu"><i class="fas fa-bars"></i></div>
           <ul>
-            <!-- При натисканні буде перекидати на ту частину сайту -->
             <li>
               <a href="" onclick="return slowScroll('.header-main');">Home</a>
             </li>
@@ -44,13 +39,17 @@
             <li>
               <a href="" onclick="return slowScroll('.services');">Services</a>
             </li>
-            <!-- <li><a href="" onclick="return slowScroll('.form')">Contact</a></li> -->
+            <li>
+              <a href="" onclick="return slowScroll('.experience');">Experience</a>
+            </li>
+            <li>
+              <a href="" onclick="return slowScroll('.form');">Contact</a>
+            </li>
           </ul>
         </div>
 
         <div class="mobile-menu">
           <ul>
-            <!-- При натисканні буде перекидати на ту частину сайту -->
             <li>
               <a href="" onclick="return slowScroll('.header-main');">Home</a>
             </li>
@@ -60,59 +59,62 @@
             <li>
               <a href="" onclick="return slowScroll('.services');">Services</a>
             </li>
-            <!-- <li><a href="" onclick="return slowScroll('.form')">Contact</a></li> -->
+            <li>
+              <a href="" onclick="return slowScroll('.experience');">Experience</a>
+            </li>
+            <li>
+              <a href="" onclick="return slowScroll('.form');">Contact</a>
+            </li>
           </ul>
-        </div>
-
-        <div class="container header-main">
-          <div class="first-block">
-            <div class="white-line-high"></div>
-
-            <div class="header-social">
-              <div class="linkedin">
-                <a href="https://www.linkedin.com/in/dmytro-haborak-3174a2261/">
-                  <img src="./public/img/linkedin.png" alt="" />
-                </a>
-              </div>
-
-              <div class="github">
-                <a href="https://github.com/dimaa21">
-                  <img src="./public/img/github.png" alt="" />
-                </a>
-              </div>
-
-              <div class="telegram">
-                <a href="https://t.me/haborak">
-                  <img src="./public/img/telegram.png" alt="" />
-                </a>
-              </div>
-            </div>
-
-            <div class="white-line-low"></div>
-          </div>
-
-          <div class="second-block">
-            <p class="hello">Hello, I am</p>
-            <h1 class="name">Dmytro</h1>
-            <span class="position"> Frond-End Developer<br /> </span>
-            <div class="button">
-              <button class="hire">
-                <a href="" onclick="return slowScroll('.form');">Hire me</a>
-              </button>
-
-              <button class="more">
-                <a href="" onclick="return slowScroll('.services');"
-                  >Know more!</a
-                >
-              </button>
-            </div>
-          </div>
-          <div class="third-block">
-            <img src="./public/img/hacker.png" alt="" />
-          </div>
         </div>
       </div>
     </header>
+
+    <section class="hero">
+      <div class="container header-main">
+        <div class="first-block">
+          <div class="white-line-high"></div>
+
+          <div class="header-social">
+            <div class="linkedin">
+              <a href="https://www.linkedin.com/in/dmytro-haborak-3174a2261/">
+                <img src="./public/img/linkedin.png" alt="LinkedIn" />
+              </a>
+            </div>
+
+            <div class="github">
+              <a href="https://github.com/dimaa21">
+                <img src="./public/img/github.png" alt="GitHub" />
+              </a>
+            </div>
+
+            <div class="telegram">
+              <a href="https://t.me/haborak">
+                <img src="./public/img/telegram.png" alt="Telegram" />
+              </a>
+            </div>
+          </div>
+
+          <div class="white-line-low"></div>
+        </div>
+
+        <div class="second-block">
+          <p class="hello">Hello, I am</p>
+          <h1 class="name">Dmytro</h1>
+          <div class="positions">
+            <span class="position">Front-End Developer</span>
+            <span class="position">Technical Integrator</span>
+          </div>
+          <div class="button">
+            <a class="hire" href="" onclick="return slowScroll('.form');">Hire me</a>
+            <a class="more" href="" onclick="return slowScroll('.services');">Know more</a>
+          </div>
+        </div>
+        <div class="third-block">
+          <img src="./public/img/hacker.png" alt="Dmytro" />
+        </div>
+      </div>
+    </section>
 
     <!-- Основна частина сайту -->
     <section class="about-me">
@@ -124,9 +126,12 @@
           <div class="info">
             <h1>About me</h1>
             <p class="desc">
-              Hi, I'm Dmytro, and I'm a young and ambitious developer from
-              Ivano-Frankivsk.<br />
-              I am 25 years old and I specialize in website development.<br /><br />
+              Hi, I'm Dmytro, a 26-year-old developer from Ivano-Frankivsk
+              with 5+ years of remote experience.<br />
+              I started as a frontend developer, grew into full website
+              development with React, PHP and Laravel, and later worked as a
+              technical integrator with Cloudflare, tracking platforms, DNS
+              and SSL.<br /><br />
             </p>
           </div>
         </div>
@@ -137,50 +142,72 @@
       <p class="main-title">My Stack</p>
       <div class="img-stack">
         <div class="main-stack">
-          <img src="./public/img/html.png" alt="" />
-          <img src="./public/img/css.png" alt="" />
-          <img src="./public/img/sass.png" alt="" />
-          <img src="./public/img/bootstrap.png" class="bootstrap" alt="" />
-          <img src="./public/img/js.png" alt="" />
-          <img src="./public/img/jquery.png" alt="" />
-          <img src="./public/img/php.png" alt="" />
-          <img src="./public/img/gulp.png" class="gulp" alt="" />
-          <img src="./public/img/figma_2.png" alt="" />
-          <img src="./public/img/github.png" alt="" />
+          <img src="./public/img/html5.svg" alt="HTML5" title="HTML5" />
+          <img src="./public/img/css3.svg" alt="CSS" title="CSS" />
+          <img src="./public/img/sass.svg" alt="Sass" title="Sass" />
+          <img src="./public/img/bootstrap.svg" alt="Bootstrap" title="Bootstrap" />
+          <img src="./public/img/javascript.svg" alt="JavaScript" title="JavaScript" />
+          <img src="./public/img/react.svg" alt="React" title="React" />
+          <img src="./public/img/jquery.svg" alt="jQuery" title="jQuery" />
+          <img src="./public/img/php.svg" alt="PHP" title="PHP" />
+          <img src="./public/img/laravel.svg" alt="Laravel" title="Laravel" />
+          <img src="./public/img/python.svg" alt="Python" title="Python" />
+          <img src="./public/img/gulp.svg" alt="Gulp" title="Gulp" />
+          <img src="./public/img/figma.svg" alt="Figma" title="Figma" />
+          <img src="./public/img/git.svg" alt="Git" title="Git" />
+          <img src="./public/img/github.svg" alt="GitHub" title="GitHub" />
+          <img src="./public/img/cloudflare.svg" alt="Cloudflare" title="Cloudflare" />
         </div>
+      </div>
+      <div class="stack-extra">
+        <span>Keitaro</span>
+        <span>Binom</span>
+        <span>DNS</span>
+        <span>SSL</span>
+        <span>SSH</span>
       </div>
     </section>
 
     <!-- Послуги -->
     <section>
       <div class="container services">
-        <p class="main-text">SERVICES I OFFER</p>
+        <p class="main-text">Services I offer</p>
 
-        <div class="container services-info">
-          <div class="landing">
-            <img src="./public/img/info1.png" alt="" />
-            <p class="name-services">Landing page</p>
-            <span
-              >A well-designed landing page will create a pleasant impression
-              for the client</span
-            >
+        <div class="services-info">
+          <div class="service-card">
+            <div class="service-icon"><i class="fa-solid fa-window-maximize"></i></div>
+            <p class="name-services">Landing pages</p>
+            <span>Fast, conversion-focused landing pages with a clean layout and clear call to action.</span>
           </div>
 
-          <div class="adaptive">
-            <img src="./public/img/info2.png" alt="" />
-            <p class="name-services">Adaptive for each device</p>
-            <span class="adaptive-info"
-              >Adaptive layout for a beautiful image of your application on any
-              device</span
-            >
+          <div class="service-card">
+            <div class="service-icon"><i class="fa-solid fa-mobile-screen-button"></i></div>
+            <p class="name-services">Responsive websites</p>
+            <span>Adaptive layout that looks sharp and stays usable on desktop, tablet, and mobile.</span>
           </div>
 
-          <div class="optimization">
-            <img src="./public/img/info3.png" alt="" />
-            <p class="name-services">Performance optimization</p>
-            <span
-              >Code optimization for fast performance of your application</span
-            >
+          <div class="service-card">
+            <div class="service-icon"><i class="fa-solid fa-code"></i></div>
+            <p class="name-services">Frontend development</p>
+            <span>Modern UI from Figma with HTML, CSS, JavaScript, and React.</span>
+          </div>
+
+          <div class="service-card">
+            <div class="service-icon"><i class="fa-solid fa-database"></i></div>
+            <p class="name-services">Web apps</p>
+            <span>Full websites and admin panels with PHP, Laravel, and a reliable backend.</span>
+          </div>
+
+          <div class="service-card">
+            <div class="service-icon"><i class="fa-solid fa-cloud"></i></div>
+            <p class="name-services">Technical integration</p>
+            <span>Cloudflare, DNS, SSL, and tracking platforms like Keitaro and Binom.</span>
+          </div>
+
+          <div class="service-card">
+            <div class="service-icon"><i class="fa-solid fa-gauge-high"></i></div>
+            <p class="name-services">Performance</p>
+            <span>Code and load-time optimization so the product stays fast after launch.</span>
           </div>
         </div>
       </div>
@@ -218,6 +245,96 @@
         </div>
       </div>
     </main>
+
+    <section class="experience">
+      <div class="container">
+        <h2 class="main-title">Experience</h2>
+        <div class="experience-list">
+          <article class="experience-item">
+            <div class="experience-period">
+              <span class="experience-dates">Jul 2024 – Aug 2026</span>
+              <span class="experience-length">2 yrs 2 mos</span>
+            </div>
+            <div class="experience-card">
+              <div class="experience-logo" aria-hidden="true">NDA</div>
+              <div class="experience-body">
+                <h3>Technical Integrator</h3>
+                <p class="experience-company">NDA · Full-time</p>
+                <p class="experience-meta">Remote</p>
+                <div class="experience-skills">
+                  <span>Cloudflare</span>
+                  <span>Keitaro</span>
+                  <span>HTML5</span>
+                  <span>CSS</span>
+                  <span>JavaScript</span>
+                  <span>PHP</span>
+                  <span>Python</span>
+                  <span>DNS</span>
+                  <span>SSL Certificates</span>
+                  <span>SSH Client</span>
+                  <span>Git</span>
+                  <span>Binom</span>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <article class="experience-item">
+            <div class="experience-period">
+              <span class="experience-dates">Apr 2023 – May 2024</span>
+              <span class="experience-length">1 yrs 1 mos</span>
+            </div>
+            <div class="experience-card">
+              <div class="experience-logo" aria-hidden="true">CO</div>
+              <div class="experience-body">
+                <h3>Web Developer</h3>
+                <p class="experience-company">CoolOrca.com, Inc. · Full-time</p>
+                <p class="experience-meta">Remote</p>
+                <div class="experience-skills">
+                  <span>HTML5</span>
+                  <span>CSS</span>
+                  <span>Sass</span>
+                  <span>JavaScript</span>
+                  <span>React</span>
+                  <span>PHP</span>
+                  <span>Laravel</span>
+                  <span>Bootstrap</span>
+                  <span>Git</span>
+                  <span>Figma</span>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <article class="experience-item">
+            <div class="experience-period">
+              <span class="experience-dates">Jan 2021 – Mar 2023</span>
+              <span class="experience-length">2 yrs 3 mos</span>
+            </div>
+            <div class="experience-card">
+              <div class="experience-logo" aria-hidden="true">FR</div>
+              <div class="experience-body">
+                <h3>Frontend Developer</h3>
+                <p class="experience-company">Freelancer.com · Full-time</p>
+                <p class="experience-meta">Remote</p>
+                <div class="experience-skills">
+                  <span>Figma</span>
+                  <span>Front-End Development</span>
+                  <span>HTML5</span>
+                  <span>CSS</span>
+                  <span>Sass</span>
+                  <span>JavaScript</span>
+                  <span>jQuery</span>
+                  <span>Bootstrap</span>
+                  <span>Gulp</span>
+                  <span>Adaptive Layout</span>
+                </div>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
 
     <!-- Відгуки -->
     <!-- <section class="reviews container">
@@ -348,55 +465,84 @@
     </section> -->
 
     <!-- Форма зворотнього зв'язку -->
-    <!-- <section class="container form">
-        <div class="main-title">
-            <p>GET IN TOUCH</p>
-        </div>
+    <section class="form">
+      <div class="container">
+        <h2 class="main-title">Get in touch</h2>
         <div class="form-container">
-            <div class="main-form">
-                <form action="/send_email.php" method="POST" id="form" class="form-body">
-                    <input class="input _req" type="text" name="name" id="name" placeholder="Name" required>
-                    <div class="error-message" id="name-error"></div>
-                    
-                    <input class="input _req" type="email" name="email" id="email" placeholder="Email" required>
-                    <div class="error-message" id="email-error"></div>
-                    
-                    <input class="third-button input _req" type="text" name="message" id="message" placeholder="Message" required>
-                    <div class="error-message" id="message-error"></div>
-                    
-                    <button class="button" type="submit">Submit</button>
-                </form>
-    
-                <div class="straight-orange-line"></div>
-    
-                <div class="info">
-                    <p class="orange-text">Address</p>
-                    <p class="simple-text">Ivano-Frankivsk</p>
-                    <p class="orange-text">Social</p>
-    
-                    <div class="social">
-                        <div class="linkedin">
-                            <a href="https://www.linkedin.com/in/dmytro-haborak-3174a2261/">
-                                <img src="./public/img/linkedin.png" alt="">
-                            </a>
-                        </div>
-    
-                        <div class="github">
-                            <a href="https://github.com/dimaa21">
-                                <img src="./public/img/github.png" alt="">
-                            </a>
-                        </div>
-    
-                        <div class="telegram">
-                            <a href="https://t.me/haborakdmytro">
-                                <img src="./public/img/telegram.png" alt="">
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
+          <div class="main-form">
+            <form
+              action="https://formspree.io/f/mgavwvpq"
+              method="POST"
+              id="form"
+              class="form-body"
+            >
+              <label class="field">
+                <span>Name</span>
+                <input
+                  class="input _req"
+                  type="text"
+                  name="name"
+                  id="name"
+                  placeholder="Your name"
+                  required
+                />
+                <div class="error-message" id="name-error"></div>
+              </label>
+
+              <label class="field">
+                <span>Email</span>
+                <input
+                  class="input _req"
+                  type="email"
+                  name="email"
+                  id="email"
+                  placeholder="you@email.com"
+                  required
+                />
+                <div class="error-message" id="email-error"></div>
+              </label>
+
+              <label class="field">
+                <span>Message</span>
+                <textarea
+                  class="input _req"
+                  name="message"
+                  id="message"
+                  placeholder="Tell me about your project"
+                  rows="5"
+                  required
+                ></textarea>
+                <div class="error-message" id="message-error"></div>
+              </label>
+
+              <input
+                type="hidden"
+                name="_subject"
+                value="New message from about-me"
+              />
+              <input
+                type="text"
+                name="_gotcha"
+                class="gotcha"
+                tabindex="-1"
+                autocomplete="off"
+              />
+
+              <button class="button" type="submit">Send message</button>
+            </form>
+          </div>
         </div>
-    </section> -->
+      </div>
+
+      <div id="modal" class="modal" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+        <div class="modal-content">
+          <button class="close-button" id="modal-close" type="button" aria-label="Close">&times;</button>
+          <div class="modal-icon">✓</div>
+          <h3 id="modal-title">Message sent</h3>
+          <p>Thank you! Your message has been sent.</p>
+        </div>
+      </div>
+    </section>
 
     <footer class="footer">
       <div class="container info-social">
