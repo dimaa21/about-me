@@ -1,69 +1,48 @@
-document.addEventListener('DOMContentLoaded', function () {
-  document.querySelector('.first-block').classList.add('animated');
-  document.querySelector('.second-block').classList.add('animated');
-  document.querySelector('.third-block').classList.add('animated');
-  document.querySelector('.social').classList.add('animated');
-  document.querySelector('.about-me').classList.add('animated');
-});
-
-function slowScroll(id) {
-    $("html, body").animate({
-        scrollTop: $(id).offset().top - 80
-    }, 501);
+function slowScroll(selector) {
+  const target = document.querySelector(selector);
+  if (!target) {
     return false;
+  }
+
+  const top = target.getBoundingClientRect().top + window.scrollY - 80;
+  window.scrollTo({ top, behavior: 'smooth' });
+  return false;
 }
 
-$(".header-top .menu").on("click", function() {
-    if($("header .mobile-menu").is(":visible"))
-        $(this).html('<i class="fas fa-bars"></i>');
-    else
-        $(this).html('<i class="fas fa-times"></i>');
-
-    $("header .mobile-menu").slideToggle();
-})
-
-$("header .mobile-menu a").on("click", function() {
-    $("header .mobile-menu").slideUp();
-    $(".header-top .menu").html('<i class="fas fa-bars"></i>');
+document.querySelectorAll('[data-scroll]').forEach((link) => {
+  link.addEventListener('click', (event) => {
+    event.preventDefault();
+    slowScroll(link.dataset.scroll);
+  });
 });
 
-const sr = ScrollReveal({
+const menuButton = document.querySelector('.header-top .menu');
+const mobileMenu = document.querySelector('header .mobile-menu');
+
+if (menuButton && mobileMenu) {
+  menuButton.addEventListener('click', () => {
+    const isOpen = mobileMenu.classList.toggle('is-open');
+    menuButton.innerHTML = isOpen
+      ? '<i class="fas fa-times"></i>'
+      : '<i class="fas fa-bars"></i>';
+  });
+
+  mobileMenu.querySelectorAll('a').forEach((link) => {
+    link.addEventListener('click', () => {
+      mobileMenu.classList.remove('is-open');
+      menuButton.innerHTML = '<i class="fas fa-bars"></i>';
+    });
+  });
+}
+
+if (typeof ScrollReveal === 'function') {
+  ScrollReveal({
     origin: 'top',
     distance: '24px',
     duration: 800,
     reset: false
-});
-
-sr.reveal(`.header-main, .about-me, .my-stack,
-            .services, .reviews,  .project, .experience, .review, .form`, {
+  }).reveal('.header-main, .about-me, .my-stack, .services, .project, .experience, .form', {
     interval: 200
-})
-
-// Слайдер
-const reviewsSlider = document.querySelector('.js-reviews-slider');
-if (reviewsSlider) {
-  new Swiper(reviewsSlider, {
-    slidesPerView: 1,
-    grabCursor: true,
-    spaceBetween: 25,
-    navigation: {
-      nextEl: '.swiper-button-next',
-      prevEl: '.swiper-button-prev',
-    },
-    scrollbar: {
-      el: '.swiper-scrollbar',
-      draggable: true,
-    },
-    pagination: {
-      el: '.swiper-pagination',
-      clickable: true,
-    },
-    loop: true,
-    breakpoints: {
-      767: {
-        slidesPerView: 2
-      }
-    }
   });
 }
 
@@ -72,14 +51,16 @@ const modal = document.getElementById('modal');
 const modalClose = document.getElementById('modal-close');
 
 function closeModal() {
-  if (modal) {
-    modal.classList.remove('is-open');
-    modal.style.display = 'none';
-    document.body.style.overflow = '';
+  if (!modal) {
+    return;
   }
+
+  modal.classList.remove('is-open');
+  modal.style.display = 'none';
+  document.body.style.overflow = '';
 }
 
-document.addEventListener('keydown', function (event) {
+document.addEventListener('keydown', (event) => {
   if (event.key === 'Escape') {
     closeModal();
   }
@@ -90,7 +71,7 @@ if (modalClose) {
 }
 
 if (modal) {
-  modal.addEventListener('click', function (event) {
+  modal.addEventListener('click', (event) => {
     if (event.target === modal) {
       closeModal();
     }
@@ -98,17 +79,17 @@ if (modal) {
 }
 
 if (contactForm) {
-  contactForm.addEventListener('submit', function (event) {
+  contactForm.addEventListener('submit', (event) => {
     event.preventDefault();
 
-    const errorMessages = document.querySelectorAll('.error-message');
-    errorMessages.forEach(message => message.textContent = '');
+    document.querySelectorAll('.error-message').forEach((message) => {
+      message.textContent = '';
+    });
 
     const name = document.getElementById('name').value.trim();
     const email = document.getElementById('email').value.trim();
     const message = document.getElementById('message').value.trim();
-    const submitButton = this.querySelector('button[type="submit"]');
-
+    const submitButton = contactForm.querySelector('button[type="submit"]');
     let valid = true;
 
     if (!name) {
@@ -128,41 +109,35 @@ if (contactForm) {
       return;
     }
 
-    if (!this.action || this.action.includes('YOUR_FORM_ID')) {
-      alert('Add your Formspree form ID in the form action to send messages.');
-      return;
-    }
-
-    const formData = new FormData(this);
-    const originalButtonText = submitButton ? submitButton.textContent : 'Submit';
+    const formData = new FormData(contactForm);
+    const originalButtonText = submitButton ? submitButton.textContent : 'Send message';
 
     if (submitButton) {
       submitButton.disabled = true;
       submitButton.textContent = 'Sending...';
     }
 
-    fetch(this.action, {
+    fetch(contactForm.action, {
       method: 'POST',
       body: formData,
       headers: {
         Accept: 'application/json'
       }
     })
-      .then(response => response.json().then(data => ({ ok: response.ok, data })))
+      .then((response) => response.json().then((data) => ({ ok: response.ok, data })))
       .then(({ ok, data }) => {
-        if (ok) {
-          if (modal) {
-            modal.classList.add('is-open');
-            modal.style.display = 'grid';
-            document.body.style.overflow = 'hidden';
-          }
-          this.reset();
-          return;
+        if (!ok) {
+          throw new Error(data.error || 'Failed to send message.');
         }
 
-        throw new Error(data.error || 'Failed to send message.');
+        if (modal) {
+          modal.classList.add('is-open');
+          modal.style.display = 'grid';
+          document.body.style.overflow = 'hidden';
+        }
+        contactForm.reset();
       })
-      .catch(error => {
+      .catch((error) => {
         console.error('Error:', error);
         alert('An error occurred: ' + error.message);
       })
@@ -174,6 +149,3 @@ if (contactForm) {
       });
   });
 }
-
-
-
