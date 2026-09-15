@@ -171,7 +171,7 @@ header {
 
       li {
         display: inline-block;
-        margin-right: 24px;
+        margin-right: 16px;
 
         &:last-child {
           margin-right: 0;
@@ -534,6 +534,16 @@ header {
       flex-wrap: wrap;
       justify-content: center;
       gap: 12px;
+      max-width: calc(8 * 72px + 7 * 12px);
+      margin: 0 auto;
+
+      @media (max-width: 768px) {
+        max-width: calc(4 * 72px + 3 * 12px);
+      }
+
+      @media (max-width: 480px) {
+        max-width: calc(3 * 72px + 2 * 12px);
+      }
     }
 
     img {
