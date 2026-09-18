@@ -1,23 +1,45 @@
-# My Website
+# Dmytro Haborak
 
-This repository contains the source code for my personal website, showcasing my skills and experience in web development.
+Personal site of a front-end developer and technical integrator from Ivano-Frankivsk.
 
-## Technologies Used
+**[Live demo](https://dimaa21.github.io/about-me/)** · [LinkedIn](https://www.linkedin.com/in/dmytro-haborak-3174a2261/) · [Telegram](https://t.me/haborak)
 
-- **HTML:** Page structure markup.
-- **CSS/SCSS:** Styling for a visually appealing design.
-- **Gulp:** Task automation for an efficient workflow.
-- **JavaScript:** Adding interactivity to enhance user experience.
-- **Figma:** Design and prototyping tool for crafting the website's look.
-- **Git:** Version control for collaborative development.
+## What’s inside
 
-## Usage
+- About, stack, services, portfolio, and experience
+- Responsive layout, sticky header, mobile menu
+- Contact form via [Formspree](https://formspree.io)
 
-Feel free to explore the code, use it for your projects, or provide feedback for improvement.
+## Tech
 
-## Updates
+HTML, SCSS, vanilla JavaScript. Gulp compiles Sass and minifies JS. The site is static and hosted on GitHub Pages.
 
-This repository may be periodically updated to enhance functionality and incorporate new features.
+## Run locally
 
-<a href="https://dimaa21.github.io/about-me/">Visit to see the live version.</a>
+```bash
+npm install
+npm start
+```
 
+Opens a local server with live reload.
+
+```bash
+npm run build
+```
+
+Compiles:
+
+- `app/css/main.scss` → `public/css/main.min.css`
+- `app/js/main.js` → `public/js/main-min.js`
+
+## Structure
+
+```text
+app/css/       SCSS source
+app/js/        JavaScript source
+public/css/    compiled styles
+public/js/     compiled scripts
+public/img/    images and icons
+index.html     page markup
+gulpfile.js    build tasks
+```
