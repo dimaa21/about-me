@@ -5,8 +5,8 @@ const sass = require('gulp-sass')(require('sass'));
 const minifyJS = require('gulp-minify');
 const browserSync = require('browser-sync').create();
 
-gulp.task('minCSS', async function () {
-  gulp.src('./app/css/main.scss')
+gulp.task('minCSS', function () {
+  return gulp.src('./app/css/main.scss')
     .pipe(sass())
     .pipe(minifyCSS())
     .pipe(rename({ suffix: '.min' }))
@@ -14,8 +14,8 @@ gulp.task('minCSS', async function () {
     .pipe(browserSync.stream());
 });
 
-gulp.task('minJS', async function () {
-  gulp.src('./app/js/main.js')
+gulp.task('minJS', function () {
+  return gulp.src('./app/js/main.js')
     .pipe(minifyJS({ ext: { min: '-min.js' }, noSource: true }))
     .pipe(gulp.dest('public/js'))
     .pipe(browserSync.stream());

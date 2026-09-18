@@ -1,18 +1,24 @@
+const HEADER_OFFSET = 80;
+
 function slowScroll(selector) {
   const target = document.querySelector(selector);
   if (!target) {
-    return false;
+    return;
   }
 
-  const top = target.getBoundingClientRect().top + window.scrollY - 80;
+  const top = target.getBoundingClientRect().top + window.scrollY - HEADER_OFFSET;
   window.scrollTo({ top, behavior: 'smooth' });
-  return false;
 }
 
-document.querySelectorAll('[data-scroll]').forEach((link) => {
+document.querySelectorAll('a[href^="#"]').forEach((link) => {
+  const href = link.getAttribute('href');
+  if (!href || href.length < 2) {
+    return;
+  }
+
   link.addEventListener('click', (event) => {
     event.preventDefault();
-    slowScroll(link.dataset.scroll);
+    slowScroll(href);
   });
 });
 
@@ -20,18 +26,21 @@ const menuButton = document.querySelector('.header-top .menu');
 const mobileMenu = document.querySelector('header .mobile-menu');
 
 if (menuButton && mobileMenu) {
-  menuButton.addEventListener('click', () => {
-    const isOpen = mobileMenu.classList.toggle('is-open');
-    menuButton.innerHTML = isOpen
+  const setMenuOpen = (open) => {
+    mobileMenu.classList.toggle('is-open', open);
+    menuButton.setAttribute('aria-expanded', String(open));
+    menuButton.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
+    menuButton.innerHTML = open
       ? '<i class="fas fa-times"></i>'
       : '<i class="fas fa-bars"></i>';
+  };
+
+  menuButton.addEventListener('click', () => {
+    setMenuOpen(!mobileMenu.classList.contains('is-open'));
   });
 
   mobileMenu.querySelectorAll('a').forEach((link) => {
-    link.addEventListener('click', () => {
-      mobileMenu.classList.remove('is-open');
-      menuButton.innerHTML = '<i class="fas fa-bars"></i>';
-    });
+    link.addEventListener('click', () => setMenuOpen(false));
   });
 }
 
@@ -56,8 +65,16 @@ function closeModal() {
   }
 
   modal.classList.remove('is-open');
-  modal.style.display = 'none';
   document.body.style.overflow = '';
+}
+
+function openModal() {
+  if (!modal) {
+    return;
+  }
+
+  modal.classList.add('is-open');
+  document.body.style.overflow = 'hidden';
 }
 
 document.addEventListener('keydown', (event) => {
@@ -79,7 +96,7 @@ if (modal) {
 }
 
 if (contactForm) {
-  contactForm.addEventListener('submit', (event) => {
+  contactForm.addEventListener('submit', async (event) => {
     event.preventDefault();
 
     document.querySelectorAll('.error-message').forEach((message) => {
@@ -104,12 +121,10 @@ if (contactForm) {
       document.getElementById('message-error').textContent = 'Please enter your message.';
       valid = false;
     }
-
     if (!valid) {
       return;
     }
 
-    const formData = new FormData(contactForm);
     const originalButtonText = submitButton ? submitButton.textContent : 'Send message';
 
     if (submitButton) {
@@ -117,35 +132,27 @@ if (contactForm) {
       submitButton.textContent = 'Sending...';
     }
 
-    fetch(contactForm.action, {
-      method: 'POST',
-      body: formData,
-      headers: {
-        Accept: 'application/json'
-      }
-    })
-      .then((response) => response.json().then((data) => ({ ok: response.ok, data })))
-      .then(({ ok, data }) => {
-        if (!ok) {
-          throw new Error(data.error || 'Failed to send message.');
-        }
-
-        if (modal) {
-          modal.classList.add('is-open');
-          modal.style.display = 'grid';
-          document.body.style.overflow = 'hidden';
-        }
-        contactForm.reset();
-      })
-      .catch((error) => {
-        console.error('Error:', error);
-        alert('An error occurred: ' + error.message);
-      })
-      .finally(() => {
-        if (submitButton) {
-          submitButton.disabled = false;
-          submitButton.textContent = originalButtonText;
-        }
+    try {
+      const response = await fetch(contactForm.action, {
+        method: 'POST',
+        body: new FormData(contactForm),
+        headers: { Accept: 'application/json' }
       });
+      const data = await response.json();
+
+      if (!response.ok) {
+        throw new Error(data.error || 'Failed to send message.');
+      }
+
+      openModal();
+      contactForm.reset();
+    } catch (error) {
+      alert('An error occurred: ' + error.message);
+    } finally {
+      if (submitButton) {
+        submitButton.disabled = false;
+        submitButton.textContent = originalButtonText;
+      }
+    }
   });
 }
