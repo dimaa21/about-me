@@ -443,75 +443,34 @@ header {
 .about-me {
   margin-top: 0;
   padding: 88px 0;
-  text-align: left;
+  text-align: center;
 
   .block {
-    @extend .flex;
-    align-items: center;
+    display: flex;
     justify-content: center;
-    gap: 64px;
     color: $mutedColor;
+  }
 
-    .order-mobile {
-      flex: 0 0 auto;
-      display: flex;
-      justify-content: flex-end;
+  .info {
+    max-width: 720px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 8px;
+
+    h1 {
+      color: $whiteColor;
+      font-size: clamp(32px, 5vw, 48px);
+      font-weight: 600;
+      text-transform: none;
+      letter-spacing: -0.03em;
+      margin: 0 auto 16px;
     }
 
-    .order-mobile img {
-      max-width: 360px;
-      border-radius: 28px;
-      padding: 0;
-      border: 1px solid $cardBorder;
-      box-shadow: $shadow;
-    }
-
-    .info {
-      flex: 1 1 auto;
-
-      h1 {
-        color: $whiteColor;
-        font-size: clamp(32px, 5vw, 48px);
-        font-weight: 600;
-        text-transform: none;
-        letter-spacing: -0.03em;
-        margin-bottom: 16px;
-      }
-
-      .desc {
-        font-size: 18px;
-        line-height: 1.7;
-        color: $mutedColor;
-      }
-    }
-
-    @media (max-width: 780px) {
-      flex-wrap: wrap;
-      text-align: center;
-
-      .order-mobile {
-        order: 2;
-        margin-top: 8px;
-        justify-content: center;
-        width: 100%;
-      }
-    }
-
-    @media (max-width: 375px) {
-      .order-mobile {
-        padding: 0 16px;
-      }
-
-      .order-mobile img {
-        max-width: 240px;
-        width: 100%;
-      }
-    }
-
-    .info {
-      @media (min-width: 781px) {
-        max-width: 640px;
-      }
+    .desc {
+      font-size: clamp(16px, 2.4vw, 18px);
+      line-height: 1.7;
+      color: $mutedColor;
+      margin: 0 auto;
     }
   }
 }
