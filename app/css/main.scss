@@ -566,8 +566,20 @@ header {
   .portfolio {
     margin-top: 48px;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    grid-template-columns: 1fr;
     gap: 24px;
+
+    @media (min-width: 640px) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @media (min-width: 992px) {
+      grid-template-columns: repeat(3, 1fr);
+
+      .landing-page:nth-child(4) {
+        grid-column: 2;
+      }
+    }
 
     .landing-page {
       border-radius: $radius;
@@ -590,6 +602,9 @@ header {
 
       img {
         width: 100%;
+        aspect-ratio: 330 / 178;
+        object-fit: cover;
+        object-position: top;
         border-radius: 12px;
         display: block;
       }
