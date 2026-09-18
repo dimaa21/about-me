@@ -1,5 +1,34 @@
 const HEADER_OFFSET = 80;
 
+(function initPageLoader() {
+  const loader = document.getElementById('page-loader');
+  const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  const hideLoader = () => {
+    document.documentElement.classList.remove('is-loading');
+
+    if (!loader) {
+      return;
+    }
+
+    loader.classList.add('is-done');
+    window.setTimeout(() => loader.remove(), 900);
+  };
+
+  if (reduceMotion || !loader) {
+    hideLoader();
+    return;
+  }
+
+  const reveal = () => window.setTimeout(hideLoader, 1600);
+
+  if (document.readyState === 'complete') {
+    reveal();
+  } else {
+    window.addEventListener('load', reveal, { once: true });
+  }
+})();
+
 function slowScroll(selector) {
   const target = document.querySelector(selector);
   if (!target) {

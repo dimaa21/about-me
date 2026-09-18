@@ -21,6 +21,105 @@ body {
   min-height: 100vh;
 }
 
+html.is-loading {
+  overflow: hidden;
+}
+
+.page-loader {
+  position: fixed;
+  inset: 0;
+  z-index: 4000;
+  display: grid;
+  place-items: center;
+  background: $blackColor;
+  clip-path: inset(0);
+  transition: clip-path 0.9s cubic-bezier(0.76, 0, 0.24, 1);
+
+  &.is-done {
+    clip-path: inset(0 0 100% 0);
+    pointer-events: none;
+  }
+
+  &-inner {
+    text-align: center;
+  }
+
+  &-hello {
+    margin: 0 0 8px;
+    color: $mutedColor;
+    font-size: 18px;
+    font-weight: 500;
+    opacity: 0;
+    transform: translateY(12px);
+    animation: loaderFade 0.6s ease 0.15s forwards;
+  }
+
+  &-name {
+    margin: 0 0 18px;
+    color: $orangeColor;
+    font-family: $fontDisplay;
+    font-size: clamp(56px, 10vw, 88px);
+    font-weight: 600;
+    line-height: 0.95;
+    letter-spacing: -0.02em;
+
+    span {
+      display: inline-block;
+      opacity: 0;
+      transform: translateY(28px);
+      animation: loaderChar 0.55s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+    }
+
+    @for $i from 1 through 6 {
+      span:nth-child(#{$i}) {
+        animation-delay: #{0.28 + $i * 0.07}s;
+      }
+    }
+  }
+
+  &-line {
+    display: block;
+    width: 52px;
+    height: 3px;
+    margin: 0 auto;
+    border-radius: 999px;
+    background: $orangeColor;
+    transform: scaleX(0);
+    transform-origin: center;
+    animation: loaderLine 0.5s ease 0.9s forwards;
+  }
+}
+
+@keyframes loaderFade {
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@keyframes loaderChar {
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@keyframes loaderLine {
+  to {
+    transform: scaleX(1);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .page-loader {
+    display: none;
+  }
+
+  html.is-loading {
+    overflow: auto;
+  }
+}
+
 ::selection {
   background: $orangeColor;
   color: $blackColor;

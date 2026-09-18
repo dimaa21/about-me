@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" class="is-loading">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -12,6 +12,16 @@
     <link rel="stylesheet" href="./public/css/main.min.css" />
   </head>
   <body>
+    <div class="page-loader" id="page-loader" aria-hidden="true">
+      <div class="page-loader-inner">
+        <p class="page-loader-hello">Hello, I am</p>
+        <p class="page-loader-name" aria-label="Dmytro">
+          <span>D</span><span>m</span><span>y</span><span>t</span><span>r</span><span>o</span>
+        </p>
+        <span class="page-loader-line"></span>
+      </div>
+    </div>
+
     <header>
       <div class="container">
         <div class="header-top">
