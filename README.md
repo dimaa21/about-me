@@ -12,7 +12,7 @@ Personal site of a front-end developer and technical integrator from Ivano-Frank
 
 ## Tech
 
-HTML, SCSS, vanilla JavaScript. Gulp compiles Sass and minifies JS. The site is static and hosted on GitHub Pages.
+React, Vite, and SCSS. The production build is static and hosted on GitHub Pages.
 
 ## Run locally
 
@@ -21,25 +21,21 @@ npm install
 npm start
 ```
 
-Opens a local server with live reload.
+Opens a Vite dev server with hot reload.
 
 ```bash
 npm run build
 ```
 
-Compiles:
+Creates a production build in `dist/`. Preview it with `npm run preview`.
 
-- `app/css/main.scss` → `public/css/main.min.css`
-- `app/js/main.js` → `public/js/main-min.js`
+For GitHub Pages, the build uses the `/about-me/` base path.
 
 ## Structure
 
 ```text
-app/css/       SCSS source
-app/js/        JavaScript source
-public/css/    compiled styles
-public/js/     compiled scripts
-public/img/    images and icons
-index.html     page markup
-gulpfile.js    build tasks
+src/components/   React sections
+src/styles/       SCSS
+src/data.js       site content
+public/img/       images and icons
 ```

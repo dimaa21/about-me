@@ -1,30 +1,30 @@
 {
   "name": "about-me",
+  "private": true,
   "version": "1.0.0",
-  "description": "Landing Page about me ",
-  "main": "gulpfile.js",
+  "type": "module",
+  "description": "Personal site of Dmytro Haborak",
   "scripts": {
-    "start": "gulp",
-    "build": "gulp minCSS && gulp minJS"
+    "start": "vite",
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
   },
   "author": "Dmytro Haborak",
   "license": "ISC",
+  "dependencies": {
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "scrollreveal": "^4.0.9"
+  },
   "devDependencies": {
-    "browser-sync": "^3.0.4",
-    "gulp": "^4.0.2",
-    "gulp-clean-css": "^4.3.0",
-    "gulp-minify": "^3.1.0",
-    "gulp-rename": "^2.1.0",
-    "gulp-sass": "^6.0.1",
-    "sass": "^1.97.3"
+    "@vitejs/plugin-react": "^4.7.0",
+    "sass": "^1.97.3",
+    "vite": "^6.3.5"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/dimaa21/about-me.git"
   },
-  "keywords": [],
-  "bugs": {
-    "url": "https://github.com/dimaa21/about-me/issues"
-  },
-  "homepage": "https://github.com/dimaa21/about-me#readme"
+  "homepage": "https://dimaa21.github.io/about-me/"
 }
