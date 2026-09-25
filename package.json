@@ -7,7 +7,7 @@
   "scripts": {
     "start": "vite",
     "dev": "vite",
-    "build": "vite build",
+    "build": "vite build && node scripts/copy-pages.js",
     "preview": "vite preview"
   },
   "author": "Dmytro Haborak",

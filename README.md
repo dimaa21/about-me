@@ -27,9 +27,7 @@ Opens a Vite dev server with hot reload.
 npm run build
 ```
 
-Creates a production build in `dist/`. Preview it with `npm run preview`.
-
-For GitHub Pages, the build uses the `/about-me/` base path.
+Creates a production build in `dist/` and copies it to the repo root so [GitHub Pages](https://dimaa21.github.io/about-me/) can serve the compiled site. Preview the build with `npm run preview`.
 
 ## Structure
 
