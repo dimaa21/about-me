@@ -107,6 +107,12 @@ export const services = [
 
 export const portfolio = [
   {
+    type: 'Online store',
+    href: 'https://yesoriginal.com.ua/',
+    src: img('portfolio6.png'),
+    alt: 'Yes Original brand clothing store'
+  },
+  {
     type: 'Website',
     href: 'https://dimaa21.github.io/website-halloween/',
     src: img('portfolio2.png'),
@@ -129,6 +135,12 @@ export const portfolio = [
     href: 'https://dimaa21.github.io/website-restaurant/',
     src: img('portfolio3.png'),
     alt: 'Restaurant website'
+  },
+  {
+    type: 'Website',
+    href: 'https://personaai-seven.vercel.app/',
+    src: img('portfolio5.png'),
+    alt: 'VIORA AI creator platform'
   }
 ];
 
