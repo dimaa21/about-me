@@ -107,12 +107,6 @@ export const services = [
 
 export const portfolio = [
   {
-    type: 'Online store',
-    href: 'https://yesoriginal.com.ua/',
-    src: img('portfolio6.png'),
-    alt: 'Yes Original brand clothing store'
-  },
-  {
     type: 'Website',
     href: 'https://dimaa21.github.io/website-halloween/',
     src: img('portfolio2.png'),
@@ -169,44 +163,4 @@ export const experience = [
       'SSH Client'
     ]
   },
-  {
-    dates: 'Apr 2023 – May 2024',
-    length: '1 yrs 1 mos',
-    logo: 'CO',
-    title: 'Web Developer',
-    company: 'CoolOrca.com, Inc. · Full-time',
-    meta: 'Remote',
-    skills: [
-      'HTML5',
-      'CSS',
-      'Sass',
-      'Bootstrap',
-      'JavaScript',
-      'React',
-      'PHP',
-      'Laravel',
-      'Git',
-      'Figma'
-    ]
-  },
-  {
-    dates: 'Jan 2021 – Mar 2023',
-    length: '2 yrs 3 mos',
-    logo: 'FR',
-    title: 'Frontend Developer',
-    company: 'Freelancer.com · Full-time',
-    meta: 'Remote',
-    skills: [
-      'HTML5',
-      'CSS',
-      'Sass',
-      'Bootstrap',
-      'JavaScript',
-      'jQuery',
-      'Gulp',
-      'Figma',
-      'Front-End Development',
-      'Adaptive Layout'
-    ]
-  }
 ];
