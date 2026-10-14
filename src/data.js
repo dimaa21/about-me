@@ -6,7 +6,6 @@ export const navItems = [
   { href: '#stack', label: 'My Stack' },
   { href: '#services', label: 'Services' },
   { href: '#portfolio', label: 'Portfolio' },
-  { href: '#experience', label: 'Experience' },
   { href: '#contact', label: 'Contact' }
 ];
 
@@ -136,31 +135,4 @@ export const portfolio = [
     src: img('portfolio5.png'),
     alt: 'VIORA AI creator platform'
   }
-];
-
-export const experience = [
-  {
-    dates: 'Jul 2024 – Aug 2026',
-    length: '2 yrs 2 mos',
-    logo: 'NDA',
-    title: 'Technical Integrator & Front-End Developer',
-    company: 'NDA · Full-time',
-    meta: 'Remote',
-    skills: [
-      'HTML5',
-      'CSS',
-      'JavaScript',
-      'React',
-      'PHP',
-      'Laravel',
-      'Python',
-      'Git',
-      'Keitaro',
-      'Binom',
-      'Cloudflare',
-      'DNS',
-      'SSL Certificates',
-      'SSH Client'
-    ]
-  },
 ];
