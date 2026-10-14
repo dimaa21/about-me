@@ -106,7 +106,7 @@ export const services = [
 
 export const portfolio = [
   {
-    type: 'Website',
+    type: 'Landing page',
     href: 'https://dimaa21.github.io/website-halloween/',
     src: img('portfolio2.png'),
     alt: 'Halloween website'
@@ -124,7 +124,7 @@ export const portfolio = [
     alt: 'Landing page project'
   },
   {
-    type: 'Website',
+    type: 'Landing page',
     href: 'https://dimaa21.github.io/website-restaurant/',
     src: img('portfolio3.png'),
     alt: 'Restaurant website'
