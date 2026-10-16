@@ -6,7 +6,7 @@ Personal site of a front-end developer and technical integrator from Ivano-Frank
 
 ## What’s inside
 
-- About, stack, services, portfolio, and contact
+- About, stack, services, portfolio, experience, and contact
 - Responsive layout, sticky header, mobile menu
 - Contact form via [Formspree](https://formspree.io)
 

@@ -2,6 +2,7 @@ import { useEffect } from 'react';
 import ScrollReveal from 'scrollreveal';
 import About from './components/About';
 import Contact from './components/Contact';
+import Experience from './components/Experience';
 import Footer from './components/Footer';
 import Header from './components/Header';
 import Hero from './components/Hero';
@@ -19,7 +20,7 @@ export default function App() {
       reset: false
     });
 
-    reveal.reveal('.header-main, .about-me, .my-stack, .services, .project, .form', {
+    reveal.reveal('.header-main, .about-me, .my-stack, .services, .project, .experience, .form', {
       interval: 200
     });
 
@@ -35,6 +36,7 @@ export default function App() {
       <Stack />
       <Services />
       <Portfolio />
+      <Experience />
       <Contact />
       <Footer />
     </>

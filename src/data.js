@@ -6,6 +6,7 @@ export const navItems = [
   { href: '#stack', label: 'My Stack' },
   { href: '#services', label: 'Services' },
   { href: '#portfolio', label: 'Portfolio' },
+  { href: '#experience', label: 'Experience' },
   { href: '#contact', label: 'Contact' }
 ];
 
@@ -134,5 +135,72 @@ export const portfolio = [
     href: 'https://personaai-seven.vercel.app/',
     src: img('portfolio5.png'),
     alt: 'VIORA AI creator platform'
+  }
+];
+
+export const experience = [
+  {
+    dates: 'Jul 2024 – Sep 2026',
+    length: '2 yrs 3 mos',
+    logo: 'NDA',
+    title: 'Technical Integrator & Front-End Developer',
+    company: 'NDA · Full-time',
+    meta: 'Remote',
+    skills: [
+      'HTML5',
+      'CSS',
+      'JavaScript',
+      'React',
+      'PHP',
+      'Laravel',
+      'Python',
+      'Git',
+      'Keitaro',
+      'Binom',
+      'Cloudflare',
+      'DNS',
+      'SSL Certificates',
+      'SSH Client'
+    ]
+  },
+  {
+    dates: 'Apr 2023 – May 2024',
+    length: '1 yr 2 mos',
+    logo: 'CO',
+    title: 'Web Developer',
+    company: 'CoolOrca.com, Inc. · Full-time',
+    meta: 'Remote',
+    skills: [
+      'HTML5',
+      'CSS',
+      'Sass',
+      'Bootstrap',
+      'JavaScript',
+      'React',
+      'PHP',
+      'Laravel',
+      'Git',
+      'Figma'
+    ]
+  },
+  {
+    dates: 'Jan 2021 – Feb 2023',
+    length: '2 yrs 2 mos',
+    logo: 'FR',
+    title: 'Frontend Developer',
+    company: 'Freelance | Self-Employed · Full-time',
+    meta: 'Remote',
+    skills: [
+      'HTML5',
+      'CSS',
+      'Sass',
+      'Bootstrap',
+      'JavaScript',
+      'jQuery',
+      'Gulp',
+      'Figma',
+      'Front-End Development',
+      'Adaptive Layout'
+    ]
   }
 ];

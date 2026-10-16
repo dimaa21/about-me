@@ -709,6 +709,175 @@ header {
   }
 }
 
+.experience {
+  padding: 40px 0 24px;
+  text-align: left;
+
+  .experience-list {
+    position: relative;
+    max-width: 860px;
+    margin: 56px auto 0;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding-left: 22px;
+
+    &::before {
+      content: "";
+      position: absolute;
+      left: 7px;
+      top: 10px;
+      bottom: 10px;
+      width: 1px;
+      background: $cardBorder;
+    }
+
+    @media (min-width: 768px) {
+      padding-left: 0;
+      gap: 24px;
+
+      &::before {
+        left: 160px;
+      }
+    }
+  }
+
+  .experience-item {
+    display: grid;
+    gap: 12px;
+    position: relative;
+
+    @media (min-width: 768px) {
+      grid-template-columns: 148px 1fr;
+      gap: 36px;
+      align-items: stretch;
+    }
+  }
+
+  .experience-period {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    padding-top: 4px;
+
+    @media (min-width: 768px) {
+      text-align: right;
+      padding-top: 28px;
+    }
+  }
+
+  .experience-dates {
+    color: $whiteColor;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 1.4;
+  }
+
+  .experience-length {
+    color: $mutedColor;
+    font-size: 13px;
+  }
+
+  .experience-card {
+    position: relative;
+    display: flex;
+    gap: 16px;
+    align-items: flex-start;
+    padding: 22px;
+    border-radius: $radius;
+    background: $cardColor;
+    border: 1px solid $cardBorder;
+    text-align: left;
+    transition: transform 0.25s ease, border-color 0.25s ease, background 0.25s ease;
+
+    &::before {
+      content: "";
+      position: absolute;
+      left: -15px;
+      top: 28px;
+      width: 9px;
+      height: 9px;
+      border-radius: 50%;
+      background: $orangeColor;
+      box-shadow: 0 0 0 4px rgba(255, 139, 106, 0.16);
+    }
+
+    &:hover {
+      transform: translateY(-4px);
+      border-color: rgba(255, 139, 106, 0.45);
+      background: rgba(255, 139, 106, 0.08);
+    }
+
+    @media (min-width: 768px) {
+      &::before {
+        left: -24px;
+      }
+    }
+
+    @media (max-width: 600px) {
+      flex-direction: column;
+    }
+  }
+
+  .experience-logo {
+    flex-shrink: 0;
+    width: 48px;
+    height: 48px;
+    display: grid;
+    place-items: center;
+    border-radius: 14px;
+    background: $orangeSoft;
+    color: $orangeColor;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+  }
+
+  .experience-body {
+    min-width: 0;
+    flex: 1;
+  }
+
+  h3 {
+    color: $whiteColor;
+    font-size: 20px;
+    font-weight: 600;
+    margin: 0 0 6px;
+    letter-spacing: -0.01em;
+  }
+
+  .experience-company {
+    color: $whiteColor;
+    font-size: 15px;
+    margin: 0 0 4px;
+  }
+
+  .experience-meta {
+    color: $mutedColor;
+    font-size: 14px;
+    margin: 0;
+  }
+
+  .experience-skills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 14px;
+
+    span {
+      display: inline-flex;
+      align-items: center;
+      padding: 6px 10px;
+      border-radius: 999px;
+      background: rgba(255, 255, 255, 0.04);
+      border: 1px solid $cardBorder;
+      color: $mutedColor;
+      font-size: 12px;
+      font-weight: 500;
+    }
+  }
+}
+
 .form {
   padding: 72px 0 24px;
   text-align: center;
