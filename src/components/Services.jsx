@@ -1,21 +1,20 @@
 import { services } from '../data';
+import SectionHead from './SectionHead';
 
 export default function Services() {
   return (
-    <section className="services" id="services">
+    <section className="section services" id="services">
       <div className="container">
-        <h2 className="main-title">Services I offer</h2>
-        <div className="services-info">
-          {services.map((service) => (
-            <div className="service-card" key={service.title}>
-              <div className="service-icon">
-                <i className={service.icon} />
-              </div>
-              <p>{service.title}</p>
-              <span>{service.text}</span>
-            </div>
+        <SectionHead index="03" title="Services" note="What you can hand over to me." />
+        <ol className="service-list">
+          {services.map((service, index) => (
+            <li key={service.title} data-reveal>
+              <span className="service-num">0{index + 1}</span>
+              <h3>{service.title}</h3>
+              <p>{service.text}</p>
+            </li>
           ))}
-        </div>
+        </ol>
       </div>
     </section>
   );

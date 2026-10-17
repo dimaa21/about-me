@@ -8,7 +8,9 @@ export function slowScroll(selector) {
     return;
   }
 
-  const top = target.getBoundingClientRect().top + window.scrollY - HEADER_OFFSET;
+  // Land on the section heading rather than on the empty padding above it.
+  const padding = parseFloat(getComputedStyle(target).paddingTop) || 0;
+  const top = target.getBoundingClientRect().top + window.scrollY + padding - HEADER_OFFSET - 24;
   window.scrollTo({ top, behavior: 'smooth' });
 }
 

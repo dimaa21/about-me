@@ -1,4 +1,7 @@
 import { useEffect, useState } from 'react';
+import { socialLinks } from '../data';
+import { useMagnetic } from '../hooks';
+import SectionHead from './SectionHead';
 
 const FORM_URL = 'https://formspree.io/f/mgavwvpq';
 
@@ -9,6 +12,7 @@ export default function Contact() {
   const [errors, setErrors] = useState(emptyErrors);
   const [sending, setSending] = useState(false);
   const [modalOpen, setModalOpen] = useState(false);
+  const sendRef = useMagnetic(0.15);
 
   const closeModal = () => {
     setModalOpen(false);
@@ -83,67 +87,86 @@ export default function Contact() {
   };
 
   return (
-    <section className="form" id="contact">
+    <section className="section contact" id="contact">
       <div className="container">
-        <h2 className="main-title">Get in touch</h2>
-        <form className="form-body" onSubmit={onSubmit} noValidate>
-          <label className="field">
-            <span>Name</span>
+        <SectionHead index="06" title="Contact" />
+        <div className="contact-grid">
+          <div className="contact-intro" data-reveal>
+            <p className="contact-big">
+              Got a project <em>in mind?</em>
+            </p>
+            <p className="contact-text">
+              Tell me what you need — a landing page, a full site or help with domains and tracking.
+            </p>
+            <ul className="contact-links">
+              {socialLinks.header.map((link) => (
+                <li key={link.href}>
+                  <a href={link.href} target="_blank" rel="noreferrer">
+                    {link.label} <span aria-hidden="true">↗</span>
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </div>
+          <form className="form-body" onSubmit={onSubmit} noValidate data-reveal>
+            <label className="field">
+              <span>Name</span>
+              <input
+                className="input"
+                type="text"
+                name="name"
+                placeholder="Your name"
+                value={values.name}
+                onChange={onChange}
+                required
+              />
+              <div className="error-message">{errors.name}</div>
+            </label>
+
+            <label className="field">
+              <span>Email</span>
+              <input
+                className="input"
+                type="email"
+                name="email"
+                placeholder="you@email.com"
+                value={values.email}
+                onChange={onChange}
+                required
+              />
+              <div className="error-message">{errors.email}</div>
+            </label>
+
+            <label className="field">
+              <span>Message</span>
+              <textarea
+                className="input"
+                name="message"
+                placeholder="Tell me about your project"
+                rows="5"
+                value={values.message}
+                onChange={onChange}
+                required
+              />
+              <div className="error-message">{errors.message}</div>
+            </label>
+
             <input
-              className="input"
               type="text"
-              name="name"
-              placeholder="Your name"
-              value={values.name}
+              name="gotcha"
+              className="gotcha"
+              tabIndex={-1}
+              autoComplete="off"
+              aria-hidden="true"
+              value={values.gotcha}
               onChange={onChange}
-              required
             />
-            <div className="error-message">{errors.name}</div>
-          </label>
 
-          <label className="field">
-            <span>Email</span>
-            <input
-              className="input"
-              type="email"
-              name="email"
-              placeholder="you@email.com"
-              value={values.email}
-              onChange={onChange}
-              required
-            />
-            <div className="error-message">{errors.email}</div>
-          </label>
-
-          <label className="field">
-            <span>Message</span>
-            <textarea
-              className="input"
-              name="message"
-              placeholder="Tell me about your project"
-              rows="5"
-              value={values.message}
-              onChange={onChange}
-              required
-            />
-            <div className="error-message">{errors.message}</div>
-          </label>
-
-          <input
-            type="text"
-            name="gotcha"
-            className="gotcha"
-            tabIndex={-1}
-            autoComplete="off"
-            aria-hidden="true"
-            value={values.gotcha}
-            onChange={onChange}
-          />
-
-          <button type="submit" disabled={sending}>
-            {sending ? 'Sending...' : 'Send message'}
-          </button>
-        </form>
+            <button type="submit" disabled={sending} ref={sendRef}>
+              {sending ? 'Sending…' : 'Send message'} <span aria-hidden="true">→</span>
+            </button>
+          </form>
+        </div>
       </div>
 
       <div

@@ -1,53 +1,78 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { navItems } from '../data';
+import { useLocalTime } from '../hooks';
 import { handleHashClick, img } from '../utils';
 
 export default function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
+  const time = useLocalTime();
+
+  useEffect(() => {
+    document.body.style.overflow = menuOpen ? 'hidden' : '';
+  }, [menuOpen]);
 
   const onNavClick = (event) => {
-    handleHashClick(event);
+    // Unlock the page before scrolling; the effect would do it a frame later
+    // and cut the smooth scroll short.
+    document.body.style.overflow = '';
     setMenuOpen(false);
+    handleHashClick(event);
   };
 
   return (
-    <header>
-      <div className="container">
-        <div className="header-top">
-          <span className="logo">
-            <img src={img('logo.png')} alt="Logo" />
+    <header className={`site-header${menuOpen ? ' menu-open' : ''}`}>
+      <div className="container header-row">
+        <a className="brand" href="#home" onClick={onNavClick} aria-label="Dmytro Haborak, back to top">
+          <img src={img('logo.png')} alt="" />
+        </a>
+
+        <nav className="nav" aria-label="Main">
+          {navItems.map((item, index) => (
+            <a key={item.href} href={item.href} onClick={handleHashClick}>
+              <sup>0{index + 1}</sup>
+              <span className="roll">
+                <span>{item.label}</span>
+              </span>
+            </a>
+          ))}
+        </nav>
+
+        <div className="header-meta">
+          <span className="status">
+            <i aria-hidden="true" />
+            Open to work
           </span>
-          <button
-            className="menu"
-            type="button"
-            aria-label={menuOpen ? 'Close menu' : 'Open menu'}
-            aria-expanded={menuOpen}
-            onClick={() => setMenuOpen((open) => !open)}
-          >
-            <i className={menuOpen ? 'fas fa-times' : 'fas fa-bars'} />
-          </button>
-          <ul>
-            {navItems.map((item) => (
-              <li key={item.href}>
-                <a href={item.href} onClick={handleHashClick}>
-                  {item.label}
-                </a>
-              </li>
-            ))}
-          </ul>
+          <span className="clock">IF {time}</span>
         </div>
 
-        <div className={`mobile-menu${menuOpen ? ' is-open' : ''}`}>
-          <ul>
-            {navItems.map((item) => (
-              <li key={item.href}>
-                <a href={item.href} onClick={onNavClick}>
-                  {item.label}
-                </a>
-              </li>
-            ))}
-          </ul>
-        </div>
+        <button
+          className="burger"
+          type="button"
+          aria-label={menuOpen ? 'Close menu' : 'Open menu'}
+          aria-expanded={menuOpen}
+          onClick={() => setMenuOpen((open) => !open)}
+        >
+          <span />
+          <span />
+        </button>
+      </div>
+
+      <div className="mobile-menu" aria-hidden={!menuOpen}>
+        <nav className="container">
+          {navItems.map((item, index) => (
+            <a
+              key={item.href}
+              href={item.href}
+              onClick={onNavClick}
+              tabIndex={menuOpen ? 0 : -1}
+              style={{ '--i': index }}
+            >
+              <sup>0{index + 1}</sup>
+              {item.label}
+            </a>
+          ))}
+        </nav>
+        <p className="container mobile-menu-foot">Ivano-Frankivsk · {time}</p>
       </div>
     </header>
   );

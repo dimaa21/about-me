@@ -1,11 +1,14 @@
 export default function SocialLinks({ links, className = 'social' }) {
   return (
-    <div className={className}>
+    <ul className={className}>
       {links.map((link) => (
-        <a key={link.href + link.alt} href={link.href}>
-          <img src={link.src} alt={link.alt} />
-        </a>
+        <li key={link.href}>
+          <a href={link.href} target="_blank" rel="noreferrer">
+            {link.label}
+            <span className="arrow" aria-hidden="true">↗</span>
+          </a>
+        </li>
       ))}
-    </div>
+    </ul>
   );
 }

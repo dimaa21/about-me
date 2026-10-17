@@ -1,12 +1,18 @@
-$orangeColor: #ff8b6a;
-$orangeHover: #ff9d82;
-$orangeSoft: rgba(255, 139, 106, 0.16);
-$whiteColor: #f6f7f9;
-$blackColor: #0b0c10;
-$mutedColor: #9aa3af;
-$cardColor: rgba(255, 255, 255, 0.045);
-$cardBorder: rgba(255, 255, 255, 0.08);
-$radius: 18px;
-$shadow: 0 20px 50px rgba(0, 0, 0, 0.28);
-$fontSans: "Bricolage Grotesque", sans-serif;
-$fontDisplay: "Bricolage Grotesque", sans-serif;
+$bg: #0d0d0c;
+$bgRaised: #151513;
+$ink: #ecebe6;
+$muted: #8b8a84;
+$dim: #55544f;
+$line: rgba(236, 235, 230, 0.12);
+$accent: #ff8b6a;
+$accentInk: #1a0d08;
+
+$fontSans: "Bricolage Grotesque", system-ui, sans-serif;
+$fontSerif: "Instrument Serif", Georgia, serif;
+$fontMono: "JetBrains Mono", ui-monospace, monospace;
+
+$ease: cubic-bezier(0.22, 1, 0.36, 1);
+$easeInOut: cubic-bezier(0.76, 0, 0.24, 1);
+
+$md: 768px;
+$lg: 1024px;

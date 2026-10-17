@@ -1,25 +1,24 @@
 import { img } from './utils';
 
 export const navItems = [
-  { href: '#home', label: 'Home' },
   { href: '#about', label: 'About' },
-  { href: '#stack', label: 'My Stack' },
+  { href: '#stack', label: 'Stack' },
   { href: '#services', label: 'Services' },
-  { href: '#portfolio', label: 'Portfolio' },
+  { href: '#portfolio', label: 'Work' },
   { href: '#experience', label: 'Experience' },
   { href: '#contact', label: 'Contact' }
 ];
 
 export const socialLinks = {
   header: [
-    { href: 'https://www.linkedin.com/in/dmytro-haborak-3174a2261/', src: img('linkedin.png'), alt: 'LinkedIn' },
-    { href: 'https://github.com/dimaa21', src: img('github.png'), alt: 'GitHub' },
-    { href: 'https://t.me/haborak', src: img('telegram.png'), alt: 'Telegram' }
+    { href: 'https://www.linkedin.com/in/dmytro-haborak-3174a2261/', label: 'LinkedIn' },
+    { href: 'https://github.com/dimaa21', label: 'GitHub' },
+    { href: 'https://t.me/haborak', label: 'Telegram' }
   ],
   footer: [
-    { href: 'https://www.linkedin.com/in/dmytro-haborak-3174a2261/', src: img('linkedin.png'), alt: 'LinkedIn' },
-    { href: 'https://github.com/dimaa21', src: img('github.png'), alt: 'GitHub' },
-    { href: 'https://t.me/dimaaa_g', src: img('telegram.png'), alt: 'Telegram' }
+    { href: 'https://www.linkedin.com/in/dmytro-haborak-3174a2261/', label: 'LinkedIn' },
+    { href: 'https://github.com/dimaa21', label: 'GitHub' },
+    { href: 'https://t.me/dimaaa_g', label: 'Telegram' }
   ]
 };
 
@@ -74,32 +73,26 @@ export const stackIcons = [
 
 export const services = [
   {
-    icon: 'fa-solid fa-window-maximize',
     title: 'Landing pages',
     text: 'Fast, conversion-focused landing pages with a clean layout and clear call to action.'
   },
   {
-    icon: 'fa-solid fa-mobile-screen-button',
     title: 'Responsive websites',
     text: 'Adaptive layout that looks sharp and stays usable on desktop, tablet, and mobile.'
   },
   {
-    icon: 'fa-solid fa-code',
     title: 'Frontend development',
     text: 'Modern UI from Figma with HTML, CSS, JavaScript, and React.'
   },
   {
-    icon: 'fa-solid fa-database',
     title: 'Web apps',
     text: 'Full websites and admin panels with PHP, Laravel, and a reliable backend.'
   },
   {
-    icon: 'fa-solid fa-cloud',
     title: 'Technical integration',
     text: 'Cloudflare, DNS, SSL, and tracking platforms like Keitaro and Binom.'
   },
   {
-    icon: 'fa-solid fa-gauge-high',
     title: 'Performance',
     text: 'Code and load-time optimization so the product stays fast after launch.'
   }
@@ -110,30 +103,35 @@ export const portfolio = [
     type: 'Landing page',
     href: 'https://dimaa21.github.io/website-halloween/',
     src: img('portfolio2.png'),
+    title: 'Halloween',
     alt: 'Halloween website'
   },
   {
     type: 'Website',
     href: 'https://uarch.if.ua/',
     src: img('portfolio4.png'),
+    title: 'Uarch',
     alt: 'Uarch architecture bureau'
   },
   {
     type: 'Landing page',
     href: 'https://dimaa21.github.io/landing-page/',
     src: img('portfolio1.png'),
+    title: 'Product landing',
     alt: 'Landing page project'
   },
   {
     type: 'Landing page',
     href: 'https://dimaa21.github.io/website-restaurant/',
     src: img('portfolio3.png'),
+    title: 'Restaurant',
     alt: 'Restaurant website'
   },
   {
     type: 'Website',
     href: 'https://personaai-seven.vercel.app/',
     src: img('portfolio5.png'),
+    title: 'Viora',
     alt: 'VIORA AI creator platform'
   }
 ];

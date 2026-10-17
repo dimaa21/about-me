@@ -1,35 +1,28 @@
 import { experience } from '../data';
+import SectionHead from './SectionHead';
 
 export default function Experience() {
   return (
-    <section className="experience" id="experience">
+    <section className="section experience" id="experience">
       <div className="container">
-        <h2 className="main-title">Experience</h2>
-        <div className="experience-list">
+        <SectionHead index="05" title="Experience" />
+        <ol className="job-list">
           {experience.map((job) => (
-            <article className="experience-item" key={job.title + job.dates}>
-              <div className="experience-period">
-                <span className="experience-dates">{job.dates}</span>
-                <span className="experience-length">{job.length}</span>
+            <li className="job" key={job.title + job.dates} data-reveal>
+              <div className="job-period">
+                <span>{job.dates}</span>
+                <span className="job-length">{job.length}</span>
               </div>
-              <div className="experience-card">
-                <div className="experience-logo" aria-hidden="true">
-                  {job.logo}
-                </div>
-                <div className="experience-body">
-                  <h3>{job.title}</h3>
-                  <p className="experience-company">{job.company}</p>
-                  <p className="experience-meta">{job.meta}</p>
-                  <div className="experience-skills">
-                    {job.skills.map((skill) => (
-                      <span key={skill}>{skill}</span>
-                    ))}
-                  </div>
-                </div>
+              <div className="job-main">
+                <h3>{job.title}</h3>
+                <p className="job-company">
+                  {job.company} · {job.meta}
+                </p>
               </div>
-            </article>
+              <p className="job-skills">{job.skills.join(' / ')}</p>
+            </li>
           ))}
-        </div>
+        </ol>
       </div>
     </section>
   );
