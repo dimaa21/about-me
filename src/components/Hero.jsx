@@ -35,8 +35,8 @@ export default function Hero() {
           <span className="hero-top-loc">Ivano-Frankivsk, UA</span>
         </div>
 
-        <h1 className="hero-name" aria-label="Front-end developer & technical integrator">
-          <span className="line" aria-hidden="true">{split('Front-end developer')}</span>
+        <h1 className="hero-name" aria-label="Full-stack developer & technical integrator">
+          <span className="line" aria-hidden="true">{split('Full-stack developer')}</span>
           <span className="line line-2" aria-hidden="true">
             <span className="char amp" style={{ '--i': 2 }}>
               <em>&amp;</em>

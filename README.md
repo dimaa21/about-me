@@ -1,6 +1,6 @@
 # Dmytro Haborak
 
-Personal site of a front-end developer and technical integrator from Ivano-Frankivsk.
+Personal site of a full-stack developer and technical integrator from Ivano-Frankivsk.
 
 **[Live demo](https://dimaa21.github.io/about-me/)** · [LinkedIn](https://www.linkedin.com/in/dmytro-haborak-3174a2261/) · [Telegram](https://t.me/haborak)
 

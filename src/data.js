@@ -81,7 +81,7 @@ export const services = [
     text: 'Adaptive layout that looks sharp and stays usable on desktop, tablet, and mobile.'
   },
   {
-    title: 'Frontend development',
+    title: 'Full-stack development',
     text: 'Modern UI from Figma with HTML, CSS, JavaScript, and React.'
   },
   {
@@ -141,7 +141,7 @@ export const experience = [
     dates: 'Jul 2024 – Sep 2026',
     length: '2 yrs 3 mos',
     logo: 'NDA',
-    title: 'Technical Integrator & Front-End Developer',
+    title: 'Technical Integrator & Full-Stack Developer',
     company: 'NDA · Full-time',
     meta: 'Remote',
     skills: [
@@ -185,7 +185,7 @@ export const experience = [
     dates: 'Jan 2021 – Feb 2023',
     length: '2 yrs 2 mos',
     logo: 'FR',
-    title: 'Frontend Developer',
+    title: 'Full-Stack Developer',
     company: 'Freelance | Self-Employed · Full-time',
     meta: 'Remote',
     skills: [
@@ -197,7 +197,7 @@ export const experience = [
       'jQuery',
       'Gulp',
       'Figma',
-      'Front-End Development',
+      'Full-Stack Development',
       'Adaptive Layout'
     ]
   }

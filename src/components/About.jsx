@@ -3,14 +3,14 @@ import { reducedMotion } from '../hooks';
 import SectionHead from './SectionHead';
 
 const text =
-  "Hi, I'm Dmytro — a 26-year-old developer from Ivano-Frankivsk with 5+ years of remote experience. I started in frontend, grew into full website development with React, PHP and Laravel, and later moved into technical integration: Cloudflare, tracking platforms, DNS and SSL.";
+  "Hi, I'm Dmytro — a 26-year-old developer from Ivano-Frankivsk with 5+ years of remote experience. I started in frontend, grew into full-stack development with React, PHP and Laravel, and later moved into technical integration: Cloudflare, tracking platforms, DNS and SSL.";
 
-const highlight = new Set(['frontend,', 'React,', 'Laravel,', 'Cloudflare,']);
+const highlight = new Set(['full-stack', 'React,', 'Laravel,', 'Cloudflare,']);
 
 const facts = [
   ['Based in', 'Ivano-Frankivsk, Ukraine'],
   ['Experience', '5+ years, remote'],
-  ['Focus', 'Frontend, integrations'],
+  ['Focus', 'Full-stack, integrations'],
   ['Now', 'Open to new projects']
 ];
 
