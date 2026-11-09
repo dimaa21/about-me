@@ -141,7 +141,7 @@ export const experience = [
     dates: 'Jul 2024 – Sep 2026',
     length: '2 yrs 3 mos',
     logo: 'NDA',
-    title: 'Technical Integrator & Front-End Developer',
+    title: 'Full-Stack Developer & Technical Integrator',
     company: 'NDA · Full-time',
     meta: 'Remote',
     skills: [
@@ -185,7 +185,7 @@ export const experience = [
     dates: 'Jan 2021 – Feb 2023',
     length: '2 yrs 2 mos',
     logo: 'FR',
-    title: 'Full-Stack Developer',
+    title: 'Front-End Developer',
     company: 'Freelance | Self-Employed · Full-time',
     meta: 'Remote',
     skills: [
@@ -197,7 +197,7 @@ export const experience = [
       'jQuery',
       'Gulp',
       'Figma',
-      'Full-Stack Development',
+      'Front-End Development',
       'Adaptive Layout'
     ]
   }
