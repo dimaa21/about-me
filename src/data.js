@@ -141,7 +141,7 @@ export const experience = [
     dates: 'Jul 2024 – Sep 2026',
     length: '2 yrs 3 mos',
     logo: 'NDA',
-    title: 'Technical Integrator & Full-Stack Developer',
+    title: 'Technical Integrator & Front-End Developer',
     company: 'NDA · Full-time',
     meta: 'Remote',
     skills: [
