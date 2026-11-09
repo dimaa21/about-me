@@ -100,13 +100,6 @@ export const services = [
 
 export const portfolio = [
   {
-    type: 'Web app',
-    href: 'https://dimaa21.github.io/campaign-analytics-dashboard/',
-    src: img('campaign-dashboard.png'),
-    title: 'Campaign Analytics',
-    alt: 'Campaign analytics dashboard for affiliate traffic'
-  },
-  {
     type: 'Website',
     href: 'https://uarch.if.ua/',
     src: img('portfolio4.png'),
@@ -119,13 +112,6 @@ export const portfolio = [
     src: img('portfolio1.png'),
     title: 'Product landing',
     alt: 'Landing page project'
-  },
-  {
-    type: 'Landing page',
-    href: 'https://dimaa21.github.io/website-restaurant/',
-    src: img('portfolio3.png'),
-    title: 'Restaurant',
-    alt: 'Restaurant website'
   },
   {
     type: 'Website',
