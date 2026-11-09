@@ -100,6 +100,13 @@ export const services = [
 
 export const portfolio = [
   {
+    type: 'Online store',
+    href: 'https://dimaa21.github.io/arka/',
+    src: img('arka.png'),
+    title: 'Arka',
+    alt: 'Arka footwear store catalog'
+  },
+  {
     type: 'Website',
     href: 'https://uarch.if.ua/',
     src: img('portfolio4.png'),
