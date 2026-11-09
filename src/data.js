@@ -138,8 +138,8 @@ export const portfolio = [
 
 export const experience = [
   {
-    dates: 'Jul 2024 – Sep 2026',
-    length: '2 yrs 3 mos',
+    dates: 'Jul 2024 – Aug 2026',
+    length: '2 yrs 2 mos',
     logo: 'NDA',
     title: 'Full-Stack Developer & Technical Integrator',
     company: 'NDA · Full-time',
