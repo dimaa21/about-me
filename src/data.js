@@ -100,6 +100,13 @@ export const services = [
 
 export const portfolio = [
   {
+    type: 'Web app',
+    href: 'https://github.com/dimaa21/Matchday',
+    src: img('matchday.png'),
+    title: 'Matchday',
+    alt: 'Matchday football league platform'
+  },
+  {
     type: 'Online store',
     href: 'https://dimaa21.github.io/arka/',
     src: img('arka.png'),
