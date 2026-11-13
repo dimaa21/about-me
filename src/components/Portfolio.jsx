@@ -69,6 +69,22 @@ export default function Portfolio() {
             </li>
           ))}
         </ul>
+
+        <a
+          className="work-more"
+          href="https://github.com/dimaa21"
+          target="_blank"
+          rel="noreferrer"
+          data-reveal
+        >
+          <span className="work-more-text">
+            There's a lot more to explore on GitHub: side projects, experiments and work in
+            progress.
+          </span>
+          <span className="work-more-link">
+            github.com/dimaa21 <span aria-hidden="true">↗</span>
+          </span>
+        </a>
       </div>
 
       <div className={`work-preview${active >= 0 ? ' is-visible' : ''}`} ref={previewRef} aria-hidden="true">

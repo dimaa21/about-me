@@ -100,6 +100,20 @@ export const services = [
 
 export const portfolio = [
   {
+    type: 'Landing page',
+    href: 'https://dimaa21.github.io/fizz/',
+    src: img('fizz.png'),
+    title: 'Fizz',
+    alt: 'Fizz zero-sugar lemonade landing page'
+  },
+  {
+    type: 'Landing page',
+    href: 'https://github.com/dimaa21/Lumen',
+    src: img('lumen.png'),
+    title: 'Lumen',
+    alt: 'Lumen AI meeting assistant landing page'
+  },
+  {
     type: 'Web app',
     href: 'https://github.com/dimaa21/Matchday',
     src: img('matchday.png'),
