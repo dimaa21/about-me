@@ -107,7 +107,7 @@ export const portfolio = [
   },
   {
     type: 'Landing page',
-    href: 'https://github.com/dimaa21/Lumen',
+    href: 'https://dimaa21.github.io/Lumen/',
     src: img('lumen.png'),
     title: 'Lumen',
     alt: 'Lumen AI meeting assistant landing page'
