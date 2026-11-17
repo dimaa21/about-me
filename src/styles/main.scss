@@ -1185,51 +1185,6 @@ html.is-loading {
   }
 }
 
-// ---------- experience
-
-.job {
-  display: grid;
-  gap: 12px;
-  padding: 28px 0;
-  border-bottom: 1px solid $line;
-
-  @media (min-width: $md) {
-    grid-template-columns: minmax(0, 1fr) minmax(0, 1.6fr) minmax(0, 1.4fr);
-    gap: 32px;
-    padding: 36px 0;
-  }
-
-  h3 {
-    font-size: clamp(22px, 2.4vw, 32px);
-    font-weight: 500;
-    line-height: 1.1;
-    letter-spacing: -0.02em;
-  }
-}
-
-.job-period {
-  display: flex;
-  flex-direction: column;
-  font-family: $fontMono;
-  font-size: 13px;
-}
-
-.job-length {
-  color: $muted;
-}
-
-.job-company {
-  margin-top: 8px;
-  color: $muted;
-}
-
-.job-skills {
-  font-family: $fontMono;
-  font-size: 12px;
-  line-height: 1.8;
-  color: $muted;
-}
-
 // ---------- contact
 
 .contact-grid {

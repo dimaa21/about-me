@@ -89,7 +89,7 @@ export default function Contact() {
   return (
     <section className="section contact" id="contact">
       <div className="container">
-        <SectionHead index="06" title="Contact" />
+        <SectionHead index="05" title="Contact" />
         <div className="contact-grid">
           <div className="contact-intro" data-reveal>
             <p className="contact-big">

@@ -5,7 +5,6 @@ export const navItems = [
   { href: '#stack', label: 'Stack' },
   { href: '#services', label: 'Services' },
   { href: '#portfolio', label: 'Work' },
-  { href: '#experience', label: 'Experience' },
   { href: '#contact', label: 'Contact' }
 ];
 
@@ -150,69 +149,3 @@ export const portfolio = [
   }
 ];
 
-export const experience = [
-  {
-    dates: 'Jul 2024 – Aug 2026',
-    length: '2 yrs 2 mos',
-    logo: 'NDA',
-    title: 'Full-Stack Developer & Technical Integrator',
-    company: 'NDA · Full-time',
-    meta: 'Remote',
-    skills: [
-      'HTML5',
-      'CSS',
-      'JavaScript',
-      'React',
-      'PHP',
-      'Laravel',
-      'Python',
-      'Git',
-      'Keitaro',
-      'Binom',
-      'Cloudflare',
-      'DNS',
-      'SSL Certificates',
-      'SSH Client'
-    ]
-  },
-  {
-    dates: 'Apr 2023 – May 2024',
-    length: '1 yr 2 mos',
-    logo: 'CO',
-    title: 'Web Developer',
-    company: 'CoolOrca.com, Inc. · Full-time',
-    meta: 'Remote',
-    skills: [
-      'HTML5',
-      'CSS',
-      'Sass',
-      'Bootstrap',
-      'JavaScript',
-      'React',
-      'PHP',
-      'Laravel',
-      'Git',
-      'Figma'
-    ]
-  },
-  {
-    dates: 'Jan 2021 – Feb 2023',
-    length: '2 yrs 2 mos',
-    logo: 'FR',
-    title: 'Front-End Developer',
-    company: 'Freelance | Self-Employed · Full-time',
-    meta: 'Remote',
-    skills: [
-      'HTML5',
-      'CSS',
-      'Sass',
-      'Bootstrap',
-      'JavaScript',
-      'jQuery',
-      'Gulp',
-      'Figma',
-      'Front-End Development',
-      'Adaptive Layout'
-    ]
-  }
-];
