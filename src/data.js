@@ -12,12 +12,12 @@ export const socialLinks = {
   header: [
     { href: 'https://www.linkedin.com/in/dmytro-haborak-3174a2261/', label: 'LinkedIn' },
     { href: 'https://github.com/dimaa21', label: 'GitHub' },
-    { href: 'https://t.me/haborak', label: 'Telegram' }
+    { href: 'https://t.me/dmytroh7', label: 'Telegram' }
   ],
   footer: [
     { href: 'https://www.linkedin.com/in/dmytro-haborak-3174a2261/', label: 'LinkedIn' },
     { href: 'https://github.com/dimaa21', label: 'GitHub' },
-    { href: 'https://t.me/dimaaa_g', label: 'Telegram' }
+    { href: 'https://t.me/dmytroh7', label: 'Telegram' }
   ]
 };
 
